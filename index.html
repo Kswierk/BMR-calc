@@ -9,7 +9,65 @@
 </head>
 
 <body>
-    <p>hello</p>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img class="logo__img" src="/img/logo_kacper.JPG" alt="logo"></a>
+        </div>
+        <ul class="navbar__list">
+            <li class="navbar__item">
+                <a class="navbar__link" href="#">O kalkulatorze</a></li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="#">Q&A</a></li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="#">Kontakt</a></li>
+        </ul>
+        <div class="burger">
+            <div class="burger__line burger__line--line1"></div>
+            <div class="burger__line burger__line--line2"></div>
+            <div class="burger__line burger__line--line3"></div>
+        </div>
+    </nav>
+
+    <section class="informative">
+        </main>
+        <header class="informative__header">
+            <h1 class="informative__heading">Oblicz swoje zapotrzebowanie kaloryczne</h1>
+            <h3 class="informative_subheader">Skorzystaj z naszego kalkulatora i dowiedz się jakie jest twoje dzienne
+                zapotrzebowanie kaloryczne. Kalkulator obiliczy również twoje wskaźniki BMI, BMR, ułoży dzienne
+                zapotrzebowanie na makroskładniki i pokaże wiele innych potrzebnych statystyk!</h3>
+    </section>
+    <section class="params">
+        <form class="param__form">
+            <label for="gender" class="gender__label">Płeć:
+                <input type="radio" name="gender__value" value="male" class="gender__param" checked>Mężczyzna
+            </label>
+            <label for="gender" class="gender__label">
+                <input type="radio" name="gender__value" value="female" class="gender__param">Kobieta
+            </label>
+            <label for="age">Wiek:
+                <input type="text" class="age__input">
+            </label>
+            <label for="age">Waga:
+                <input type="text" class="weight__input" placeholder="kg">
+            </label>
+            <label for="age">Wzrost:
+                <input type="text" class="height__input" placeholder="cm">
+            </label>
+            <label for="activity">Poziom aktywności fizycznej:
+                <select name="activity__level" id="activity__level">
+                    <option value="none">Brak aktywności fizycznej</option>
+                    <option value="low">Mała aktywność fizyczna (ćwiczenia 1-3x tygodniowo</option>
+                    <option value="moderate">Średnia aktywność fizyczna (ćwiczenia 3-5x tygodniowo</option>
+                    <option value="high">Wysoka aktywność fizyczna (ćwiczenia codziennie)</option>
+                    <option value="very-high">Bardzo aktywność fizyczna (ćwiczenia codziennie + praca fizyczna)</option>
+                </select>
+            </label>
+            <a href="#">Oblicz</a>
+        </form>
+    </section>
+
+
+    <script src="/js/navbar.js"></script>
 </body>
 
 </html>

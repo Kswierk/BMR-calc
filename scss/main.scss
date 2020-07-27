@@ -1,7 +1,14 @@
-body {
-    background-color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-p {
-    font-size: 50px;
-}
+
+//abstracts
+@import 'abstracts/type';
+
+//base 
+@import 'base/base';
+
+//components 
+
+@import 'layout/navbar';
+@import 'layout/informative';
+@import 'layout/params'

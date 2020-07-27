@@ -1,0 +1,136 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: royalblue;
+
+    .logo {
+        height: 60px;
+
+        .logo__img {
+            height: 100%;
+        }
+    }
+
+    .navbar__list {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        z-index: 2;
+
+        .navbar__item {
+
+            list-style: none;
+
+            .navbar__link {
+                text-decoration: none;
+                // color: $lightgray;
+                letter-spacing: 2px;
+                font-size: 1.1em;
+                transition: .3s;
+
+                // &:hover {
+                //     color: $yellow;
+                // }
+            }
+        }
+    }
+
+    .burger {
+
+        display: none;
+
+        .burger__line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            border-radius: 2px;
+            margin: 5px;
+            background-color: black;
+        }
+    }
+}
+
+
+
+@media (max-width: 800px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+
+        .logo {
+            height: 60px;
+        }
+
+        .navbar__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+            // background-color: $blue;
+            transform: translateX(100%);
+            transition: all .3s ease-in;
+
+            .navbar__item {
+                opacity: 0;
+            }
+        }
+
+        .burger {
+            display: block;
+            cursor: pointer;
+
+            .burger__line {
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+}
+
+
+.navbar__list.navbar__list--active {
+    transform: translateX(0%);
+}
+
+.toggle .burger__line--line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .burger__line--line2 {
+    opacity: 0;
+}
+
+.toggle .burger__line--line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        .navbar__list {
+            width: 100%;
+        }
+    }
+}
+
+
+@keyframes navlinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50px);
+    }
+}
