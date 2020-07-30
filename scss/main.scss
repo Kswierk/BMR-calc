@@ -7,8 +7,14 @@
 //base 
 @import 'base/base';
 
-//components 
+//components
+@import 'components/horizontal-line';
+
+//layout
 
 @import 'layout/navbar';
 @import 'layout/informative';
-@import 'layout/params'
+@import 'layout/params';
+@import 'layout/results';
+@import 'layout/ideal-weight';
+@import 'layout/bmi';

@@ -7,6 +7,22 @@
   line-height: 25px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.horizontal__line {
+  display: block;
+  height: 1px;
+  border-radius: 5px;
+  width: 80%;
+  background-color: royalblue;
+  margin: 10px auto;
+  opacity: 0.6;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -31,6 +47,7 @@
 }
 .navbar .navbar__list .navbar__item .navbar__link {
   text-decoration: none;
+  color: lightgray;
   letter-spacing: 2px;
   font-size: 1.1em;
   transition: 0.3s;
@@ -48,8 +65,10 @@
 }
 
 @media (max-width: 800px) {
-  body {
+  body,
+html {
     overflow-x: hidden;
+    position: relative;
   }
 
   .navbar .logo {
@@ -63,6 +82,7 @@
     right: 0px;
     height: 92vh;
     top: 8vh;
+    background-color: royalblue;
     transform: translateX(100%);
     transition: all 0.3s ease-in;
   }
@@ -116,9 +136,135 @@
 .informative .informative__heading {
   text-align: center;
   margin: 30px auto;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 .informative .informative_subheader {
   text-align: center;
   font-weight: 400;
+}
+
+.params {
+  font-weight: 700;
+}
+.params .param__form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.params .param__form .param__row {
+  margin: 40px;
+  font-size: 1.3em;
+}
+.params .param__form .param__row .gender__label {
+  margin: 15px;
+}
+.params .param__form .param__row .gender__label #gender__value {
+  width: 15vw;
+}
+.params .param__form .age__input,
+.params .param__form .weight__input,
+.params .param__form .height__input {
+  margin: 20px 10px;
+  width: 30vw;
+}
+.params .param__form .activity__label {
+  margin: 20px;
+}
+.params .param__form .activity__label #activity__level {
+  width: 40vw;
+}
+.params .param__form .calculate__btn {
+  width: 200px;
+  margin: 20px auto;
+  background-color: royalblue;
+  padding: 30px;
+  font-size: 1.3em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.flex__wraper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.flex__wraper .results__section {
+  margin: 40px 10px;
+  background-color: cornsilk;
+  border-radius: 20px;
+}
+.flex__wraper .results__section .results__header {
+  margin: 30px 0;
+  font-size: 1.3em;
+}
+.flex__wraper .results__section .results__header .results__heading {
+  line-height: 35px;
+}
+.flex__wraper .results__section .calories__display .calories__perday,
+.flex__wraper .results__section .calories__display .calories__perweek {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 0;
+  font-size: 1.4em;
+}
+.flex__wraper .stats__info {
+  font-size: 1.2em;
+}
+.flex__wraper .stats__info .stats__text {
+  margin: 30px 10px;
+}
+.flex__wraper .stats__info .stats__text .stats__calories {
+  font-weight: 700;
+}
+.flex__wraper .stats__info .calrate {
+  display: flex;
+}
+
+.ideal-weight__wraper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.ideal-weight__wraper .ideal__weight {
+  margin: 40px auto;
+}
+.ideal-weight__wraper .ideal__weight .ideal__header {
+  margin: 30px 0;
+  font-size: 1.3em;
+}
+.ideal-weight__wraper .ideal__weight .ideal__header .ideal__heading {
+  line-height: 35px;
+}
+.ideal-weight__wraper .ideal__weight .ideal__text {
+  font-size: 1.3em;
+}
+.ideal-weight__wraper .ideal__weight .ideal__text .ideal__bold {
+  font-weight: 700;
+}
+.ideal-weight__wraper .ideal__weight .calrate {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+.bmi__wraper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.bmi__wraper .bmi .bmi__header {
+  margin: 40px auto;
+}
+.bmi__wraper .bmi__text {
+  margin: 40px auto;
+}
+.bmi__wraper .bmi__text .bmi__classified,
+.bmi__wraper .bmi__text .bmi__span {
+  font-weight: 700;
+}
+.bmi__wraper .calrate {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
 }

@@ -25,7 +25,7 @@
 
             .navbar__link {
                 text-decoration: none;
-                // color: $lightgray;
+                color: lightgray;
                 letter-spacing: 2px;
                 font-size: 1.1em;
                 transition: .3s;
@@ -56,8 +56,10 @@
 
 @media (max-width: 800px) {
 
-    body {
+    body,
+    html {
         overflow-x: hidden;
+        position: relative;
     }
 
     .navbar {
@@ -74,7 +76,7 @@
             right: 0px;
             height: 92vh;
             top: 8vh;
-            // background-color: $blue;
+            background-color: royalblue;
             transform: translateX(100%);
             transition: all .3s ease-in;
 

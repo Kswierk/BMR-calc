@@ -1,0 +1,26 @@
+.bmi__wraper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .bmi {
+        .bmi__header {
+            margin: 40px auto;
+        }
+    }
+
+    .bmi__text {
+        margin: 40px auto;
+
+        .bmi__classified,
+        .bmi__span {
+            font-weight: $font-bold;
+        }
+    }
+
+    .calrate {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    }
+}
