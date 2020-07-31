@@ -29,8 +29,6 @@ class Calculator {
 
 
         this.addListeners()
-        // this.caloriesIntake();
-        // this.bmiRate();
     }
 
     addListeners() {

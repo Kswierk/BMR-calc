@@ -1,50 +1,12 @@
 .params {
 
-    font-weight: $font-bold;
-
     .param__form {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
 
-        .param__row {
-            margin: 40px;
-            font-size: 1.3em;
-
-            .gender__label {
-
-                margin: 15px;
-
-                #gender__value {
-                    width: 15vw;
-                }
-            }
-        }
-
-        .age__input,
-        .weight__input,
-        .height__input {
-            margin: 20px 10px;
-            width: 30vw;
-        }
-
-        .activity__label {
-            margin: 20px;
-
-            #activity__level {
-                width: 40vw;
-            }
-        }
-
-        .calculate__btn {
-            width: 200px;
-            margin: 20px auto;
-            background-color: royalblue;
-            padding: 30px;
-            font-size: 1.3em;
-            border-radius: 10px;
-            border: none;
-            cursor: pointer;
+        .param__wrap {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80vw;
         }
     }
 }

@@ -6,6 +6,9 @@
   font-family: "Lato", sans-serif;
   line-height: 25px;
 }
+*:focus {
+  outline: none;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -28,7 +31,7 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: royalblue;
+  background-color: #2159D4;
 }
 .navbar .logo {
   height: 60px;
@@ -47,7 +50,7 @@ input::-webkit-inner-spin-button {
 }
 .navbar .navbar__list .navbar__item .navbar__link {
   text-decoration: none;
-  color: lightgray;
+  color: #ddd;
   letter-spacing: 2px;
   font-size: 1.1em;
   transition: 0.3s;
@@ -61,7 +64,7 @@ input::-webkit-inner-spin-button {
   height: 3px;
   border-radius: 2px;
   margin: 5px;
-  background-color: black;
+  background-color: #ddd;
 }
 
 @media (max-width: 800px) {
@@ -82,9 +85,9 @@ html {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: royalblue;
+    background-color: #2159D4;
     transform: translateX(100%);
-    transition: all 0.3s ease-in;
+    transition: all 0.4s ease-in;
   }
   .navbar .navbar__list .navbar__item {
     opacity: 0;
@@ -94,7 +97,7 @@ html {
     cursor: pointer;
   }
   .navbar .burger .burger__line {
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
   }
 }
 .navbar__list.navbar__list--active {
@@ -121,16 +124,16 @@ html {
 @keyframes navlinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(250px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50px);
+    transform: translateX(0px);
   }
 }
 .informative {
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 60px 20px;
   align-items: center;
 }
 .informative .informative__heading {
@@ -143,82 +146,55 @@ html {
   font-weight: 400;
 }
 
-.params {
-  font-weight: 700;
-}
-.params .param__form {
+.params .param__form .param__wrap {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-.params .param__form .param__row {
-  margin: 40px;
-  font-size: 1.3em;
-}
-.params .param__form .param__row .gender__label {
-  margin: 15px;
-}
-.params .param__form .param__row .gender__label #gender__value {
-  width: 15vw;
-}
-.params .param__form .age__input,
-.params .param__form .weight__input,
-.params .param__form .height__input {
-  margin: 20px 10px;
-  width: 30vw;
-}
-.params .param__form .activity__label {
-  margin: 20px;
-}
-.params .param__form .activity__label #activity__level {
-  width: 40vw;
-}
-.params .param__form .calculate__btn {
-  width: 200px;
-  margin: 20px auto;
-  background-color: royalblue;
-  padding: 30px;
-  font-size: 1.3em;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+  margin: 0 auto;
+  width: 80vw;
 }
 
-.flex__wraper {
+.results {
+  display: none;
+}
+.results .flex__wraper {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.flex__wraper .results__section {
+.results .flex__wraper .results__section {
   margin: 40px 10px;
   background-color: cornsilk;
   border-radius: 20px;
 }
-.flex__wraper .results__section .results__header {
+.results .flex__wraper .results__section .results__header {
   margin: 30px 0;
   font-size: 1.3em;
 }
-.flex__wraper .results__section .results__header .results__heading {
+.results .flex__wraper .results__section .results__header .results__heading {
   line-height: 35px;
 }
-.flex__wraper .results__section .calories__display .calories__perday,
-.flex__wraper .results__section .calories__display .calories__perweek {
+.results .flex__wraper .results__section .calories__display .calories__perday,
+.results .flex__wraper .results__section .calories__display .calories__perweek {
   display: flex;
   justify-content: space-around;
   margin: 35px 0;
   font-size: 1.4em;
 }
-.flex__wraper .stats__info {
+.results .flex__wraper .stats__info {
   font-size: 1.2em;
 }
-.flex__wraper .stats__info .stats__text {
+.results .flex__wraper .stats__info .stats__text {
   margin: 30px 10px;
 }
-.flex__wraper .stats__info .stats__text .stats__calories {
+.results .flex__wraper .stats__info .stats__text .stats__calories {
   font-weight: 700;
 }
-.flex__wraper .stats__info .calrate {
+.results .flex__wraper .stats__info .calrate {
   display: flex;
+}
+
+.results.show-results {
+  display: block;
 }
 
 .ideal-weight__wraper {
