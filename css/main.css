@@ -17,11 +17,9 @@ input::-webkit-inner-spin-button {
 }
 
 .horizontal__line {
-  display: block;
   height: 1px;
-  border-radius: 5px;
   width: 80%;
-  background-color: royalblue;
+  background-color: #FFAC00;
   margin: 10px auto;
   opacity: 0.6;
 }
@@ -152,6 +150,28 @@ html {
   margin: 0 auto;
   width: 80vw;
 }
+.params .param__form .param__wrap .param__label {
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+.params .param__form .param__wrap .param__value {
+  height: 40px;
+  font-size: 1.4em;
+}
+.params .param__form .param__wrap .calculate__btn {
+  margin: 30px auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  background-color: #0C25CB;
+  color: #ddd;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.params .param__form .param__wrap .calculate__btn:focus {
+  outline: none;
+}
 
 .results {
   display: none;
@@ -163,8 +183,8 @@ html {
 }
 .results .flex__wraper .results__section {
   margin: 40px 10px;
-  background-color: cornsilk;
-  border-radius: 20px;
+  background-color: #FFAC00;
+  border-radius: 30px;
 }
 .results .flex__wraper .results__section .results__header {
   margin: 30px 0;
@@ -177,11 +197,12 @@ html {
 .results .flex__wraper .results__section .calories__display .calories__perweek {
   display: flex;
   justify-content: space-around;
-  margin: 35px 0;
+  margin: 40px 10px;
   font-size: 1.4em;
 }
 .results .flex__wraper .stats__info {
   font-size: 1.2em;
+  margin: 0 15px;
 }
 .results .flex__wraper .stats__info .stats__text {
   margin: 30px 10px;
@@ -203,7 +224,7 @@ html {
   text-align: center;
 }
 .ideal-weight__wraper .ideal__weight {
-  margin: 40px auto;
+  margin: 40px 15px;
 }
 .ideal-weight__wraper .ideal__weight .ideal__header {
   margin: 30px 0;
@@ -214,6 +235,7 @@ html {
 }
 .ideal-weight__wraper .ideal__weight .ideal__text {
   font-size: 1.3em;
+  margin: 40px 0;
 }
 .ideal-weight__wraper .ideal__weight .ideal__text .ideal__bold {
   font-weight: 700;
@@ -222,6 +244,7 @@ html {
   display: flex;
   justify-content: space-around;
   font-size: 1.2em;
+  margin: 15px;
 }
 
 .bmi__wraper {
@@ -230,10 +253,12 @@ html {
   text-align: center;
 }
 .bmi__wraper .bmi .bmi__header {
-  margin: 40px auto;
+  margin: 30px auto;
+  font-size: 1.2em;
 }
 .bmi__wraper .bmi__text {
   margin: 40px auto;
+  font-size: 1.2em;
 }
 .bmi__wraper .bmi__text .bmi__classified,
 .bmi__wraper .bmi__text .bmi__span {
@@ -243,4 +268,5 @@ html {
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  font-size: 1.2em;
 }

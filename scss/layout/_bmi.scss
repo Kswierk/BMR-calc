@@ -5,12 +5,14 @@
 
     .bmi {
         .bmi__header {
-            margin: 40px auto;
+            margin: 30px auto;
+            font-size: 1.2em;
         }
     }
 
     .bmi__text {
         margin: 40px auto;
+        font-size: 1.2em;
 
         .bmi__classified,
         .bmi__span {
@@ -22,5 +24,6 @@
         display: flex;
         justify-content: space-around;
         margin: 20px;
+        font-size: 1.2em;
     }
 }
