@@ -62,6 +62,6 @@ class Scroller {
     }
 }
 
-const scroller = new Scroller('[data-results]');
+const scroller = new Scroller('[data-start]');
 
 scroller.initializeScroller();

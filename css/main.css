@@ -24,6 +24,41 @@ input::-webkit-inner-spin-button {
   opacity: 0.6;
 }
 
+.macro__square {
+  background-color: #FFAC00;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 10px;
+  opacity: 0.8;
+}
+.macro__square .protein,
+.macro__square .fats,
+.macro__square .carbs {
+  font-size: 1.2em;
+}
+.macro__square .protein .macro-big,
+.macro__square .fats .macro-big,
+.macro__square .carbs .macro-big {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.macro__square .protein .macro-text,
+.macro__square .fats .macro-text,
+.macro__square .carbs .macro-text {
+  margin: 10px;
+}
+.macro__square .protein:after,
+.macro__square .fats:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #000;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -159,7 +194,7 @@ html {
   font-size: 1.4em;
 }
 .params .param__form .param__wrap .calculate__btn {
-  margin: 30px auto;
+  margin: 100px auto;
   width: 200px;
   height: 50px;
   border-radius: 40px;
@@ -216,6 +251,35 @@ html {
 
 .results.show-results {
   display: block;
+}
+
+.macro .macro__header .macro__heading {
+  font-size: 2.2em;
+  margin: 30px auto;
+}
+.macro .macro__links {
+  display: flex;
+  justify-content: center;
+}
+.macro .macro__links .macro__link {
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px;
+  color: #0C25CB;
+  border: 1px solid #FFAC00;
+  border-radius: 10px;
+}
+.macro .macro__text {
+  margin-bottom: 20px 0;
+}
+.macro .macro__percentage {
+  display: inline-block;
+  background-color: #FD8C03;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 10px 10px 0 0;
 }
 
 .ideal-weight__wraper {

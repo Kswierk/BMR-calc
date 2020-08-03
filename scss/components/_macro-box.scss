@@ -1,0 +1,38 @@
+.macro__square {
+    background-color: $orange;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px;
+    opacity: .8;
+
+    .protein,
+    .fats,
+    .carbs {
+        font-size: 1.2em;
+
+        .macro-big {
+            font-size: 1.5em;
+            font-weight: $font-bold;
+            margin: 10px 0;
+        }
+
+        .macro-text {
+            margin: 10px;
+        }
+    }
+
+    .protein,
+    .fats {
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #000;
+        }
+    }
+
+
+}
