@@ -1,0 +1,36 @@
+.macro {
+    .macro__header {
+        .macro__heading {
+            font-size: 2.2em;
+            margin: 30px auto;
+        }
+    }
+
+    .macro__links {
+        display: flex;
+        justify-content: center;
+
+        .macro__link {
+            margin: 10px;
+            font-size: 1.2em;
+            font-weight: $font-bold;
+            cursor: pointer;
+            padding: 10px;
+            color: $blue;
+            border: 1px solid $orange;
+            border-radius: 10px;
+        }
+    }
+
+    .macro__text {
+        margin-bottom: 20px 0;
+    }
+
+    .macro__percentage {
+        display: inline-block;
+        background-color: $darkorange;
+        margin-top: 20px;
+        padding: 5px;
+        border-radius: 10px 10px 0 0;
+    }
+}

@@ -75,6 +75,7 @@
             </form>
         </section>
     </div>
+    <div class="results-start" data-start></div>
     <div class="results">
         <div class="flex__wraper">
             <article class="results__section" data-results>
@@ -92,10 +93,72 @@
                     </div>
                 </div>
             </article>
+
+            <section class="macro">
+                <header class="macro__header">
+                    <h1 class="macro__heading">Makroskładniki</h1>
+                </header>
+                <div class="macro__links">
+                    <p class="macro__maintenance macro__link" data-maintenance>Utrzymanie</p>
+                    <p class="macro__cutting macro__link" data-cutting>Redukcja</p>
+                    <p class="macro__bulking macro__link" data-bulking>Masa</p>
+                </div>
+                <p class="macro__text">these macro values revlead your mainanence of 2.123kcal pera day</p>
+
+                <div class="macro__percentage">Zbilansowana (25/40/35)</div>
+                <div class="macro__square">
+                    <div class="protein">
+                        <p class="macro-big" data-moderate-protein>211g</p>
+                        <p class="protein-text macro-text">białka</p>
+                    </div>
+                    <div class="fats">
+                        <p class="macro-big" data-moderate-fats>211g</p>
+                        <p class="fats-text macro-text">tłuszczy</p>
+                    </div>
+                    <div class="carbs">
+                        <p class="macro-big" data-moderate-carbs>211g</p>
+                        <p class="carbs-text macro-text">węglowodanów</p>
+                    </div>
+                </div>
+                <div class="macro__percentage">Ketoza (20/75/5)</div>
+                <div class="macro__square">
+                    <div class="protein">
+                        <p class="macro-big" data-keto-protein>211g</p>
+                        <p class="protein-text macro-text">białka</p>
+                    </div>
+                    <div class="fats">
+                        <p class="macro-big" data-keto-fats>211g</p>
+                        <p class="fats-text macro-text">tłuszczy</p>
+                    </div>
+                    <div class="carbs">
+                        <p class="macro-big" data-keto-carbs>211g</p>
+                        <p class="carbs-text macro-text">węglowodanów</p>
+                    </div>
+                </div>
+                <div class="macro__percentage">Wysokowęglowodanowa (30/20/50)</div>
+                <div class="macro__square">
+                    <div class="protein">
+                        <p class="macro-big" data-highcarb-protein>211g</p>
+                        <p class="protein-text macro-text">białka</p>
+                    </div>
+                    <div class="fats">
+                        <p class="macro-big" data-highcarb-fats>211g</p>
+                        <p class="fats-text macro-text">tłuszczy</p>
+                    </div>
+                    <div class="carbs">
+                        <p class="macro-big" data-highcarb-carbs>211g</p>
+                        <p class="carbs-text macro-text">węglowodanów</p>
+                    </div>
+                </div>
+            </section>
+
+
+
             <article class="stats__info">
                 <p class="stats__text">Bazując na Twoich wynikach, najlepszym dla utrzymania wagi ciała jest spożywanie
                     <span class="stats__calories"></span> kalorii
-                    dziennie, wzorując się na formule Katch-McArdldiv, który znany jest za najdokładniejszy. Tabela
+                    dziennie, wzorując się na formule Miffin-St Jeor'a, która znana jest z najdokładniejszego wyniku.
+                    Tabela
                     poniżej
                     pokazuje różnice jeżeli wybrałbyś inny poziom aktywności fizycznej.</p>
                 <div class="horizontal__line"></div>
@@ -205,6 +268,7 @@
 
 
     <script src="/js/navbar.js"></script>
+    <script src="/js/Macroswitch.js"></script>
     <script src="/js/Calculator.js"></script>
     <script src="/js/Scroller.js"></script>
 </body>

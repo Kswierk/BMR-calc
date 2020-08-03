@@ -36,6 +36,7 @@ class Calculator {
             this.caloriesIntake();
             this.properWeight();
             this.bmiRate();
+            macroswitch.initSwtch();
         });
     }
 
@@ -91,7 +92,7 @@ class Calculator {
         this.hamwiFormulaWomen = `${Math.floor(45.5 + (2.2 * ((this.height.value / 2.54) - 60)))}kg`;
 
         this.devineFormulaMen = `${Math.floor(50 + (2.3 * ((this.height.value / 2.54) - 60)))}kg`;
-        this.devineFormulaWomen = Math.floor(45.5 + (2.3 * ((this.height.value / 2.54) - 60)));
+        this.devineFormulaWomen = `${Math.floor(45.5 + (2.3 * ((this.height.value / 2.54) - 60)))}kg`;
 
         this.robinsonFormulaMen = `${Math.floor(52 + (1.9 * ((this.height.value / 2.54) - 60)))}kg`;
         this.robinsonFormulaWomen = `${Math.floor(49 + (1.9 * ((this.height.value / 2.54) - 60)))}kg`;
