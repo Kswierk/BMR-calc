@@ -1,0 +1,36 @@
+.footer {
+    background-color: #ddd;
+    font-size: 1.2em;
+
+    .footer__column {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+
+        .copyright__flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0 40px 0;
+            font-size: 1em;
+
+            .footer__copyright {
+                height: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .contact__flex {
+            display: flex;
+            justify-content: center;
+
+            margin: 20px 0;
+
+            .footlink {
+                padding: 10px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

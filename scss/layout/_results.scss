@@ -51,6 +51,10 @@
     }
 }
 
+.active__bold {
+    font-weight: $font-bold;
+}
+
 .results.show-results {
     display: block;
 }

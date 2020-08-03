@@ -249,6 +249,10 @@ html {
   display: flex;
 }
 
+.active__bold {
+  font-weight: 700;
+}
+
 .results.show-results {
   display: block;
 }
@@ -333,4 +337,35 @@ html {
   justify-content: space-around;
   margin: 20px;
   font-size: 1.2em;
+}
+
+.footer {
+  background-color: #ddd;
+  font-size: 1.2em;
+}
+.footer .footer__column {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.footer .footer__column .copyright__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 40px 0;
+  font-size: 1em;
+}
+.footer .footer__column .copyright__flex .footer__copyright {
+  height: 15px;
+  margin-right: 5px;
+}
+.footer .footer__column .contact__flex {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.footer .footer__column .contact__flex .footlink {
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
 }

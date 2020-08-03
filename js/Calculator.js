@@ -37,6 +37,7 @@ class Calculator {
             this.properWeight();
             this.bmiRate();
             macroswitch.initSwtch();
+            this.caloriesBold();
         });
     }
 
@@ -142,6 +143,40 @@ class Calculator {
         } else {
             this.bmi__classified.innerHTML = 'otyłość';
         }
+    }
+
+    caloriesBold() {
+        this.base = document.querySelector('.base__calories-rate');
+        this.low = document.querySelector('.low__calories-rate');
+        this.moderate = document.querySelector('.moderate__calories-rate');
+        this.highModerate = document.querySelector('.high-moderate__calories-rate');
+        this.high = document.querySelector('.high__calories-rate');
+        this.vhigh = document.querySelector('.vhigh__calories-rate');
+
+        this.boldRemove();
+
+        if (this.activityLevel.value === '1') this.base.classList.add('active__bold');
+        else if (this.activityLevel.value === '1.2') this.low.classList.add('active__bold');
+        else if (this.activityLevel.value === '1.4')
+            this.moderate.classList.add('active__bold');
+        else if (this.activityLevel.value === '1.6')
+            this.highModerate.classList.add('active__bold');
+        else if (this.activityLevel.value === '1.8')
+            this.high.classList.add('active__bold');
+        else if (this.activityLevel.value === '2')
+            this.vhigh.classList.add('active__bold');
+
+
+
+    }
+
+    boldRemove() {
+        this.base.classList.remove('active__bold');
+        this.low.classList.remove('active__bold');
+        this.moderate.classList.remove('active__bold');
+        this.highModerate.classList.remove('active__bold');
+        this.high.classList.remove('active__bold');
+        this.vhigh.classList.remove('active__bold');
     }
 }
 
