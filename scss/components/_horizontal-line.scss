@@ -1,8 +1,9 @@
 .horizontal__line {
-    // display: block;
-    height: 1px;
+    display: block;
+    height: 2px;
     width: 80%;
-    background-color: $orange;
+    background-color: $darkcontrast;
     margin: 10px auto;
     opacity: .6;
+    transform: rotateX(45deg);
 }

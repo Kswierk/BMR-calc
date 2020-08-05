@@ -31,6 +31,7 @@ class Scroller {
         this.weightInput = document.querySelector('[data-weight]');
         this.heightInput = document.querySelector('[data-height]');
         this.resultsSection = document.querySelector('.results');
+        this.resultsHeading = document.querySelector('.results__mainheading');
 
         this.badValues = calc.weight.value > 200 || calc.weight.value < 30 || calc.age.value > 100 || calc.age.value < 10 || calc.height.value > 250 || calc.height.value < 100;
 
@@ -48,6 +49,7 @@ class Scroller {
         }
 
         this.resultsSection.classList.add('show-results');
+        this.resultsHeading.classList.add('show-results');
 
         this.ageInput.style.border = "1px solid black";
         this.weightInput.style.border = "1px solid black";

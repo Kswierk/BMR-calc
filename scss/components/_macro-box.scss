@@ -1,10 +1,18 @@
+.square__flex {
+    display: flex;
+    flex-direction: column;
+}
+
 .macro__square {
-    background-color: $orange;
+    background-color: $darkcontrast;
+    color: $secondary;
     width: 90%;
-    margin: 0 auto;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 40px auto;
+    margin-bottom: 40px;
     border-radius: 30px;
     padding: 10px;
-    opacity: .8;
 
     .protein,
     .fats,
@@ -15,10 +23,12 @@
             font-size: 1.5em;
             font-weight: $font-bold;
             margin: 10px 0;
+            text-align: center;
         }
 
         .macro-text {
             margin: 10px;
+            text-align: center;
         }
     }
 
@@ -30,9 +40,26 @@
             height: 1px;
             width: 80%;
             margin: 0 auto;
-            background-color: #000;
+            background-color: $main;
         }
     }
+}
 
+@media(min-width: 1000px) {
+    .square__flex {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
 
+    .macro__square {
+        max-width: 300px;
+    }
+}
+
+@media(min-width: 1400px) {
+
+    .macro__square {
+        max-width: 400px;
+    }
 }
