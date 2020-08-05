@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    line-height: 25px;
+    font-family: 'Roboto', sans-serif;
 
     &:focus {
         outline: none;
     }
 }
+
+body {
+    background-color: #faffff;
+}
+
 
 
 input::-webkit-outer-spin-button,

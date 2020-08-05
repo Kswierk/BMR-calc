@@ -1,13 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  line-height: 25px;
+  font-family: "Roboto", sans-serif;
 }
 *:focus {
   outline: none;
+}
+
+body {
+  background-color: #faffff;
 }
 
 input::-webkit-outer-spin-button,
@@ -17,20 +20,30 @@ input::-webkit-inner-spin-button {
 }
 
 .horizontal__line {
-  height: 1px;
+  display: block;
+  height: 2px;
   width: 80%;
-  background-color: #FFAC00;
+  background-color: #004a7c;
   margin: 10px auto;
   opacity: 0.6;
+  transform: rotateX(45deg);
+}
+
+.square__flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .macro__square {
-  background-color: #FFAC00;
+  background-color: #004a7c;
+  color: #e8f1f5;
   width: 90%;
-  margin: 0 auto;
+  max-width: 400px;
+  min-width: 300px;
+  margin: 40px auto;
+  margin-bottom: 40px;
   border-radius: 30px;
   padding: 10px;
-  opacity: 0.8;
 }
 .macro__square .protein,
 .macro__square .fats,
@@ -43,11 +56,13 @@ input::-webkit-inner-spin-button {
   font-size: 1.5em;
   font-weight: 700;
   margin: 10px 0;
+  text-align: center;
 }
 .macro__square .protein .macro-text,
 .macro__square .fats .macro-text,
 .macro__square .carbs .macro-text {
   margin: 10px;
+  text-align: center;
 }
 .macro__square .protein:after,
 .macro__square .fats:after {
@@ -56,15 +71,31 @@ input::-webkit-inner-spin-button {
   height: 1px;
   width: 80%;
   margin: 0 auto;
-  background-color: #000;
+  background-color: #fafafa;
 }
 
+@media (min-width: 1000px) {
+  .square__flex {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .macro__square {
+    max-width: 300px;
+  }
+}
+@media (min-width: 1400px) {
+  .macro__square {
+    max-width: 400px;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #2159D4;
+  background-color: #004a7c;
 }
 .navbar .logo {
   height: 60px;
@@ -74,7 +105,7 @@ input::-webkit-inner-spin-button {
 }
 .navbar .navbar__list {
   display: flex;
-  width: 50%;
+  width: 40%;
   justify-content: space-around;
   z-index: 2;
 }
@@ -83,10 +114,13 @@ input::-webkit-inner-spin-button {
 }
 .navbar .navbar__list .navbar__item .navbar__link {
   text-decoration: none;
-  color: #ddd;
+  color: #fafafa;
   letter-spacing: 2px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition: 0.3s;
+}
+.navbar .navbar__list .navbar__item .navbar__link:hover {
+  color: #e8f1f5;
 }
 .navbar .burger {
   display: none;
@@ -97,7 +131,7 @@ input::-webkit-inner-spin-button {
   height: 3px;
   border-radius: 2px;
   margin: 5px;
-  background-color: #ddd;
+  background-color: #fafafa;
 }
 
 @media (max-width: 800px) {
@@ -111,19 +145,26 @@ html {
     height: 60px;
   }
   .navbar .navbar__list {
-    display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     right: 0px;
     height: 92vh;
+    width: 100%;
     top: 8vh;
-    background-color: #2159D4;
+    background-color: #e8f1f5;
+    color: #004a7c;
     transform: translateX(100%);
     transition: all 0.4s ease-in;
   }
   .navbar .navbar__list .navbar__item {
     opacity: 0;
+  }
+  .navbar .navbar__list .navbar__item .navbar__link {
+    color: #004a7c;
+  }
+  .navbar .navbar__list .navbar__item .navbar__link:hover {
+    color: #005691;
   }
   .navbar .burger {
     display: block;
@@ -149,11 +190,6 @@ html {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-@media (max-width: 1200px) {
-  .navbar .navbar__list {
-    width: 100%;
-  }
-}
 @keyframes navlinkFade {
   from {
     opacity: 0;
@@ -164,48 +200,99 @@ html {
     transform: translateX(0px);
   }
 }
-.informative {
-  max-width: 1200px;
-  margin: 60px 20px;
-  align-items: center;
-}
-.informative .informative__heading {
+.informative__heading {
   text-align: center;
-  margin: 30px auto;
-  font-size: 2em;
-}
-.informative .informative_subheader {
-  text-align: center;
-  font-weight: 400;
+  margin: 50px 0;
+  font-size: 2.2em;
+  line-height: 40px;
+  color: #004a7c;
 }
 
+.front__wrapper {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  margin: 0 40px;
+}
+
+.informative {
+  max-width: 1000px;
+}
+.informative .informative__subheader {
+  display: none;
+  text-align: start;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@media (min-width: 1200px) {
+  .front__wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .informative {
+    width: 40vw;
+  }
+  .informative .informative__heading {
+    font-size: 3.5em;
+    line-height: 50px;
+  }
+  .informative .informative__subheader {
+    margin: 60px 20px 0 20px;
+    display: block;
+  }
+}
 .params .param__form .param__wrap {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80vw;
+  width: 60vw;
 }
 .params .param__form .param__wrap .param__label {
-  font-size: 1.4em;
-  margin: 10px 0;
+  font-size: 1.2em;
 }
 .params .param__form .param__wrap .param__value {
   height: 40px;
-  font-size: 1.4em;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+.params .param__form .param__wrap #gender__value,
+.params .param__form .param__wrap #activity__level {
+  cursor: pointer;
 }
 .params .param__form .param__wrap .calculate__btn {
-  margin: 100px auto;
-  width: 200px;
-  height: 50px;
+  margin: 80px auto;
   border-radius: 40px;
   border: none;
-  background-color: #0C25CB;
-  color: #ddd;
+  background-color: #004a7c;
+  color: #fafafa;
   font-size: 1.4em;
+  padding: 0.5em 2.5em;
   cursor: pointer;
+  transition: 0.3s;
+}
+.params .param__form .param__wrap .calculate__btn:hover {
+  background-color: #005691;
 }
 .params .param__form .param__wrap .calculate__btn:focus {
   outline: none;
+}
+
+@media (min-width: 1200px) {
+  .params .param__form .param__wrap {
+    width: 30vw;
+    margin: 50px 100px;
+  }
+  .params .param__form .param__wrap .calculate__btn {
+    margin: 30px auto;
+  }
+}
+.results__mainheading {
+  text-align: center;
+  display: none;
+  font-size: 2.2em;
+  margin: 20px 0;
 }
 
 .results {
@@ -215,14 +302,18 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 .results .flex__wraper .results__section {
-  margin: 40px 10px;
-  background-color: #FFAC00;
+  margin: 40px 20px;
+  background-color: #004a7c;
+  color: #fafafa;
   border-radius: 30px;
+  max-width: 600px;
+  padding: 40px 10px;
 }
 .results .flex__wraper .results__section .results__header {
-  margin: 30px 0;
+  margin: 40px 0 30px 0;
   font-size: 1.3em;
 }
 .results .flex__wraper .results__section .results__header .results__heading {
@@ -232,58 +323,110 @@ html {
 .results .flex__wraper .results__section .calories__display .calories__perweek {
   display: flex;
   justify-content: space-around;
-  margin: 40px 10px;
-  font-size: 1.4em;
+  margin: 60px 0;
+  font-size: 1.6em;
 }
 .results .flex__wraper .stats__info {
   font-size: 1.2em;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 .results .flex__wraper .stats__info .stats__text {
-  margin: 30px 10px;
+  margin: 30px 0;
+  text-align: start;
 }
 .results .flex__wraper .stats__info .stats__text .stats__calories {
   font-weight: 700;
 }
 .results .flex__wraper .stats__info .calrate {
   display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+.results .flex__wraper .stats__info .base__text {
+  margin-right: 30px;
 }
 
 .active__bold {
   font-weight: 700;
 }
 
-.results.show-results {
+.results.show-results,
+.results__mainheading.show-results {
   display: block;
 }
 
+@media (min-width: 550px) {
+  .results .flex__wraper .results__section .calories__display .calories__perday,
+.results .flex__wraper .results__section .calories__display .calories__perweek {
+    margin: 40px 80px;
+  }
+}
+@media (min-width: 1000px) {
+  .results .flex__wraper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stats__info {
+    width: 50vw;
+  }
+}
 .macro .macro__header .macro__heading {
   font-size: 2.2em;
-  margin: 30px auto;
+  margin: 40px auto;
+  text-align: center;
+}
+.macro .macro__header .macro__goal {
+  text-align: center;
+  margin-bottom: 30px;
 }
 .macro .macro__links {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 .macro .macro__links .macro__link {
   margin: 10px;
+  width: 180px;
   font-size: 1.2em;
   font-weight: 700;
   cursor: pointer;
   padding: 10px;
-  color: #0C25CB;
-  border: 1px solid #FFAC00;
+  background-color: #004a7c;
+  color: #fafafa;
   border-radius: 10px;
 }
 .macro .macro__text {
-  margin-bottom: 20px 0;
+  margin: 40px 20px;
+  text-align: center;
+  font-size: 1.2em;
 }
 .macro .macro__percentage {
-  display: inline-block;
-  background-color: #FD8C03;
-  margin-top: 20px;
+  position: relative;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: #fafafa;
+  max-width: 280px;
+  left: 50%;
   padding: 5px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .macro .macro__links .macro__link {
+    padding: 20px;
+    margin: 0 3%;
+  }
+}
+.first__page {
+  min-height: 100vh;
+}
+
+.ideal-bmi__flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .ideal-weight__wraper {
@@ -292,7 +435,7 @@ html {
   text-align: center;
 }
 .ideal-weight__wraper .ideal__weight {
-  margin: 40px 15px;
+  margin: 40px 20px;
 }
 .ideal-weight__wraper .ideal__weight .ideal__header {
   margin: 30px 0;
@@ -304,6 +447,7 @@ html {
 .ideal-weight__wraper .ideal__weight .ideal__text {
   font-size: 1.3em;
   margin: 40px 0;
+  text-align: start;
 }
 .ideal-weight__wraper .ideal__weight .ideal__text .ideal__bold {
   font-weight: 700;
@@ -312,20 +456,33 @@ html {
   display: flex;
   justify-content: space-around;
   font-size: 1.2em;
-  margin: 15px;
+  margin: 20px 10px;
 }
 
+@media (min-width: 1000px) {
+  .ideal-bmi__flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .ideal__weight .ideal__text {
+    width: 50vw;
+  }
+}
 .bmi__wraper {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 60px;
 }
 .bmi__wraper .bmi .bmi__header {
-  margin: 30px auto;
+  margin: 40px auto;
   font-size: 1.2em;
 }
 .bmi__wraper .bmi__text {
-  margin: 40px auto;
+  margin: 40px 0;
   font-size: 1.2em;
 }
 .bmi__wraper .bmi__text .bmi__classified,
@@ -335,12 +492,13 @@ html {
 .bmi__wraper .calrate {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
+  margin: 20px 0;
   font-size: 1.2em;
 }
 
 .footer {
-  background-color: #ddd;
+  background-color: #004a7c;
+  color: #fafafa;
   font-size: 1.2em;
 }
 .footer .footer__column {
@@ -352,7 +510,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 30px 0;
   font-size: 1em;
 }
 .footer .footer__column .copyright__flex .footer__copyright {
@@ -365,7 +523,8 @@ html {
   margin: 20px 0;
 }
 .footer .footer__column .contact__flex .footlink {
-  padding: 10px;
+  padding: 10px 30px;
   text-decoration: none;
+  color: #fafafa;
   cursor: pointer;
 }

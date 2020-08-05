@@ -3,7 +3,7 @@
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: $lightblue;
+    background-color: $darkcontrast;
 
     .logo {
         height: 60px;
@@ -15,7 +15,7 @@
 
     .navbar__list {
         display: flex;
-        width: 50%;
+        width: 40%;
         justify-content: space-around;
         z-index: 2;
 
@@ -25,14 +25,14 @@
 
             .navbar__link {
                 text-decoration: none;
-                color: #ddd;
+                color: $main;
                 letter-spacing: 2px;
-                font-size: 1.1em;
+                font-size: 1.2em;
                 transition: .3s;
 
-                // &:hover {
-                //     color: $yellow;
-                // }
+                &:hover {
+                    color: $secondary;
+                }
             }
         }
     }
@@ -47,7 +47,7 @@
             height: 3px;
             border-radius: 2px;
             margin: 5px;
-            background-color: #ddd;
+            background-color: $main;
         }
     }
 }
@@ -69,19 +69,28 @@
         }
 
         .navbar__list {
-            display: flex;
             flex-direction: column;
             align-items: center;
             position: absolute;
             right: 0px;
             height: 92vh;
+            width: 100%;
             top: 8vh;
-            background-color: $lightblue;
+            background-color: $secondary;
+            color: $darkcontrast;
             transform: translateX(100%);
             transition: all .4s ease-in;
 
             .navbar__item {
                 opacity: 0;
+
+                .navbar__link {
+                    color: $darkcontrast;
+
+                    &:hover {
+                        color: $contrast;
+                    }
+                }
             }
         }
 
@@ -115,14 +124,6 @@
 }
 
 
-@media (max-width: 1200px) {
-
-    .navbar {
-        .navbar__list {
-            width: 100%;
-        }
-    }
-}
 
 
 @keyframes navlinkFade {

@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator zapotrzebowania kalorycznego</title>
+    <title>Kalkulator zapotrzebowania kalorycznego BMR</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/img/favicon1.png" type="image/png">
 </head>
 
 <body>
     <div class="first__page">
         <nav class="navbar">
             <div class="logo">
-                <a href="/index.html"><img class="logo__img" src="/img/logo_kacper.JPG" alt="logo"></a>
+                <a href="/index.html"><img class="logo__img" src="/img/makro.pl" alt="logo"></a>
             </div>
             <ul class="navbar__list">
                 <li class="navbar__item">
@@ -29,53 +30,67 @@
             </div>
         </nav>
 
-        <section class="informative">
-            </main>
-            <header class="informative__header">
-                <h1 class="informative__heading">Oblicz swoje zapotrzebowanie kaloryczne</h1>
-                <h3 class="informative_subheader">Skorzystaj z naszego kalkulatora i dowiedz się jakie jest twoje
-                    dzienne
-                    zapotrzebowanie kaloryczne. Kalkulator obiliczy również twoje wskaźniki BMI, BMR, ułoży dzienne
-                    zapotrzebowanie na makroskładniki i pokaże wiele innych potrzebnych statystyk!</h3>
-        </section>
-        <section class="params">
-            <form class="param__form">
-                <div class="param__wrap">
+        <h1 class="informative__heading">Oblicz swoje zapotrzebowanie kaloryczne</h1>
+        <div class="front__wrapper">
+            <section class="params">
+                <form class="param__form">
+                    <div class="param__wrap">
 
-                    <label for="gender" class="gender__label param__label">Płeć:
-                    </label>
-                    <select name="gender__value" id="gender__value" class="param__value" data-gender>
-                        <option value="male">Mężczyzna</option>
-                        <option value="female">Kobieta</option>
-                    </select>
+                        <label for="gender" class="gender__label param__label">Płeć:
+                        </label>
+                        <select name="gender__value" id="gender__value" class="param__value" data-gender>
+                            <option value="male">Mężczyzna</option>
+                            <option value="female">Kobieta</option>
+                        </select>
 
-                    <label for="age" class="param__label">Wiek:
-                    </label>
-                    <input type="number" class="age__input param__value" data-age required>
-                    <label for="weight" class="param__label">Waga:
-                    </label>
-                    <input type="number" class="weight__input param__value" placeholder="kg" data-weight required>
-                    <label for="height" class="param__label">Wzrost:
-                    </label>
-                    <input type="number" class="height__input param__value" placeholder="cm" data-height required>
+                        <label for="age" class="param__label">Wiek:
+                        </label>
+                        <input type="number" class="age__input param__value" data-age required>
+                        <label for="weight" class="param__label">Waga:
+                        </label>
+                        <input type="number" class="weight__input param__value" placeholder="kg" data-weight required>
+                        <label for="height" class="param__label">Wzrost:
+                        </label>
+                        <input type="number" class="height__input param__value" placeholder="cm" data-height required>
 
 
-                    <label for="activity" class="param__label" class="activity__label">Poziom aktywności fizycznej:
-                    </label>
-                    <select data-activity name="activity__level" id="activity__level" class="param__value">
-                        <option value="1">leżący lub siedzący tryb życia, brak aktywności fizycznej</option>
-                        <option value="1.2">praca siedząca, aktywność fizyczna na niskim poziomie</option>
-                        <option value="1.4">praca nie fizyczna, trening 2 razy w tygodniu</option>
-                        <option value="1.6">lekka praca fizyczna, trening 3-4 razy w tygodniu</option>
-                        <option value="1.8">praca fizyczna, trening 5 razy w tygodniu</option>
-                        <option value="2"> ciężka praca fizyczna, codzienny trening</option>
-                    </select>
-                    <button type="button" class="calculate__btn" data-calc>Oblicz</button>
-                </div>
-            </form>
-        </section>
+                        <label for="activity" class="param__label" class="activity__label">Poziom aktywności fizycznej:
+                        </label>
+                        <select data-activity name="activity__level" id="activity__level" class="param__value">
+                            <option value="1">leżący lub siedzący tryb życia, brak aktywności fizycznej</option>
+                            <option value="1.2">praca siedząca, aktywność fizyczna na niskim poziomie</option>
+                            <option value="1.4">praca nie fizyczna, trening 2 razy w tygodniu</option>
+                            <option value="1.6">lekka praca fizyczna, trening 3-4 razy w tygodniu</option>
+                            <option value="1.8">praca fizyczna, trening 5 razy w tygodniu</option>
+                            <option value="2"> ciężka praca fizyczna, codzienny trening</option>
+                        </select>
+                        <button type="button" class="calculate__btn" data-calc>Oblicz</button>
+                    </div>
+                </form>
+            </section>
+            <section class="informative">
+                </main>
+                <header class="informative__header">
+
+                    <h3 class="informative__subheader">Skorzystaj z naszego kalkulatora i dowiedz się jakie jest twoje
+                        dzienne
+                        zapotrzebowanie kaloryczne. Kalkulator obiliczy również twoje wskaźniki BMI, BMR, ułoży dzienne
+                        zapotrzebowanie na makroskładniki i pokaże wiele innych potrzebnych statystyk!</h3><br>
+                    <h3 class="informative__subheader">Twoje całkowite dzienne zapotrzebowanie energetyczne zawiera
+                        kalorie które spalasz podczas każdej aktywności fizycznej. Po pierwsze liczymy twoją podstawową
+                        przemianę materii (PPM), a następnie mnożymy razy współczynnik aktywności dziennej. Nasz
+                        kalkulator korzysta z najdokładniejszych formuł i pokazuje wyniki w sposób prosty i zrozumiały.
+                    </h3>
+            </section>
+        </div>
+    </div>
     </div>
     <div class="results-start" data-start></div>
+    <heading class="results__main">
+        <h1 class="results__mainheading">
+            Zapotrzebowanie kaloryczne
+        </h1>
+    </heading>
     <div class="results">
         <div class="flex__wraper">
             <article class="results__section" data-results>
@@ -94,19 +109,64 @@
                 </div>
             </article>
 
-            <section class="macro">
-                <header class="macro__header">
-                    <h1 class="macro__heading">Makroskładniki</h1>
-                </header>
-                <div class="macro__links">
-                    <p class="macro__maintenance macro__link" data-maintenance>Utrzymanie</p>
-                    <p class="macro__cutting macro__link" data-cutting>Redukcja</p>
-                    <p class="macro__bulking macro__link" data-bulking>Masa</p>
+            <article class="stats__info">
+                <p class="stats__text">Bazując na Twoich wynikach, najlepszym dla utrzymania wagi ciała jest spożywanie
+                    <span class="stats__calories"></span> kalorii
+                    dziennie, wzorując się na formule Miffin-St Jeor'a, która znana jest z najdokładniejszego wyniku.
+                    Tabela
+                    poniżej
+                    pokazuje różnice jeżeli wybrałbyś inny poziom aktywności fizycznej.</p>
+                <!-- <div class="horizontal__line"></div> -->
+                <div class="base__calories-rate calrate">
+                    <p class="base__text">Podstawowa przemiana materii</p>
+                    <p class="base__number"><span class="base__span"></span> kalorii dziennie</p>
                 </div>
-                <p class="macro__text"></p>
+                <div class="horizontal__line"></div>
+                <div class="low__calories-rate calrate">
+                    <p class="base__text">Niska aktywność fizyczna</p>
+                    <p class="low__number"><span class="low__span"></span> kalorii dziennie</p>
+                </div>
+                <div class="horizontal__line"></div>
+                <div class="moderate__calories-rate calrate">
+                    <p class="base__text">Średnia aktywność fizyczna</p>
+                    <p class="moderate__number"><span class="moderate__span"></span> kalorii dziennie</p>
+                </div>
+                <div class="horizontal__line"></div>
+                <div class="high-moderate__calories-rate calrate">
+                    <p class="base__text">Średnio-wysoka aktywność fizyczna</p>
+                    <p class="high-moderate__number"><span class="high-moderate__span"></span> kalorii dziennie</p>
+                </div>
+                <div class="horizontal__line"></div>
+                <div class="high__calories-rate calrate">
+                    <p class="base__text">Wysoka aktywność fizyczna</p>
+                    <p class="high__number"><span class="high__span"></span> kalorii dziennie</p>
+                </div>
+                <div class="horizontal__line"></div>
+                <div class="vhigh__calories-rate calrate">
+                    <p class="base__text">Bardzo wysoka aktywność fizyczna</p>
+                    <p class="vhigh__number"><span class="vhigh__span"></span> kalorii dziennie</p>
+                </div>
+                <!-- <div class="horizontal__line"></div> -->
+            </article>
+        </div>
 
-                <div class="macro__percentage">Zbilansowana (25/40/35)</div>
+
+        <section class="macro">
+            <header class="macro__header">
+                <h1 class="macro__heading">Makroskładniki</h1>
+                <h2 class="macro__goal">Wybierz cel:</h2>
+            </header>
+            <div class="macro__links">
+                <p class="macro__maintenance macro__link" data-maintenance>Utrzymanie</p>
+                <p class="macro__cutting macro__link" data-cutting>Redukcja</p>
+                <p class="macro__bulking macro__link" data-bulking>Masa</p>
+            </div>
+            <p class="macro__text"></p>
+
+            <div class="square__flex">
+
                 <div class="macro__square">
+                    <div class="macro__percentage">Zbilansowana (25/40/35)</div>
                     <div class="protein">
                         <p class="macro-big" data-moderate-protein></p>
                         <p class="protein-text macro-text">białka</p>
@@ -120,8 +180,8 @@
                         <p class="carbs-text macro-text">węglowodanów</p>
                     </div>
                 </div>
-                <div class="macro__percentage">Wysokowęglowodanowa (30/20/50)</div>
                 <div class="macro__square">
+                    <div class="macro__percentage">Wysokowęglowodanowa (30/20/50)</div>
                     <div class="protein">
                         <p class="macro-big" data-highcarb-protein></p>
                         <p class="protein-text macro-text">białka</p>
@@ -135,8 +195,8 @@
                         <p class="carbs-text macro-text">węglowodanów</p>
                     </div>
                 </div>
-                <div class="macro__percentage">Ketoza (20/75/5)</div>
                 <div class="macro__square">
+                    <div class="macro__percentage">Ketoza (20/75/5)</div>
                     <div class="protein">
                         <p class="macro-big" data-keto-protein></p>
                         <p class="protein-text macro-text">białka</p>
@@ -150,119 +210,85 @@
                         <p class="carbs-text macro-text">węglowodanów</p>
                     </div>
                 </div>
+            </div>
 
-            </section>
+        </section>
+        <div class="ideal-bmi__flex">
+            <div class="ideal-weight__wraper">
+                <article class="ideal__weight">
+                    <header class="ideal__header">
+                        <h1 class="ideal__heading">
+                            Prawidłowa waga: <span class="hamwi__number"></span> - <span class="miller__number"></span>
+                        </h1>
+                    </header>
+                    <p class="ideal__text">
+                        Twoja prawidłowa waga powinna wynosić <span class="hamwi__number"></span> - <span
+                            class="miller__number"></span> bazując na różnych formułach przedstawionych poniżej. Formuły
+                        te
+                        bazują na wzroście i reprezentują przeciętną, dlatego uzyskany wynik nie zawsze odzwieciedla
+                        rzeczywistość.
+                        <span class="ideal__bold">zwłaszcza jeżeli
+                            trenujesz siłowo</span>
+                    </p>
+                    <div class="horizontal__line"></div>
+                    <div class="hamwi__rate calrate">
+                        <p class="hamwi__text">G.J Hamwi Formula(1964)</p>
+                        <p class="hamwi__number"></p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="devine__rate calrate">
+                        <p class="devine__text">B.J Devine Formula(1974)</p>
+                        <p class="devine__number"></p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="robinson__rate calrate">
+                        <p class="robinson__text">J.D Robinson Formula(1983)</p>
+                        <p class="robinson__number"></p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="miller__rate calrate">
+                        <p class="miller__text">D.R Miller Formula(1983)</p>
+                        <p class="miller__number"></p>
+                    </div>
+                    <div class="horizontal__line"></div>
 
+                </article>
+            </div>
+            <div class="bmi__wraper">
+                <article class="bmi">
+                    <header class="bmi__header">
+                        <h1 class="bmi__heading">
+                            Twój wskaźnik BMI: <span class="bmi__span"></span>
+                        </h1>
+                    </header>
+                    <p class="bmi__text">
+                        Twoje BMI wynosi <span class="bmi__span"></span>, co według WHO oznacza <span
+                            class="bmi__classified">nadwagę</span>...
+                    </p>
+                    <div class="horizontal__line"></div>
+                    <div class="bmi__underweight calrate">
+                        <p class="underweight__scale">18.5 lub mniej</p>
+                        <p class="underweight__bmi">Niedowaga</p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="bmi__normal calrate">
+                        <p class="normal__scale">18.5 - 24.99</p>
+                        <p class="normal__bmi">Prawidłowa waga</p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="bmi__overweight calrate">
+                        <p class="overweight__scale">25 - 29.99</p>
+                        <p class="overweight__bmi">Nadwaga</p>
+                    </div>
+                    <div class="horizontal__line"></div>
+                    <div class="bmi__obese calrate">
+                        <p class="obese__scale">30+</p>
+                        <p class="obese__bmi">Otyłość</p>
+                    </div>
+                    <div class="horizontal__line"></div>
 
-
-            <article class="stats__info">
-                <p class="stats__text">Bazując na Twoich wynikach, najlepszym dla utrzymania wagi ciała jest spożywanie
-                    <span class="stats__calories"></span> kalorii
-                    dziennie, wzorując się na formule Miffin-St Jeor'a, która znana jest z najdokładniejszego wyniku.
-                    Tabela
-                    poniżej
-                    pokazuje różnice jeżeli wybrałbyś inny poziom aktywności fizycznej.</p>
-                <div class="horizontal__line"></div>
-                <div class="base__calories-rate calrate">
-                    <p class="base__text">Podstawowa przemiana materii </p>
-                    <p class="base__number"><span class="base__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="low__calories-rate calrate">
-                    <p class="low__text">Niska aktywność fizyczna</p>
-                    <p class="low__number"><span class="low__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="moderate__calories-rate calrate">
-                    <p class="moderate__text">Średnia aktywność fizyczna</p>
-                    <p class="moderate__number"><span class="moderate__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="high-moderate__calories-rate calrate">
-                    <p class="high-moderate__text">Średnio-wysoka aktywność fizyczna</p>
-                    <p class="high-moderate__number"><span class="high-moderate__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="high__calories-rate calrate">
-                    <p class="high__text">Wysoka aktywność fizyczna</p>
-                    <p class="high__number"><span class="high__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="vhigh__calories-rate calrate">
-                    <p class="vhigh__text">Bardzo wysoka aktywność fizyczna</p>
-                    <p class="vhigh__number"><span class="vhigh__span"></span> kalorii dziennie</p>
-                </div>
-                <div class="horizontal__line"></div>
-            </article>
-        </div>
-        <div class="ideal-weight__wraper">
-            <article class="ideal__weight">
-                <header class="ideal__header">
-                    <h1 class="ideal__heading">
-                        Prawidłowa waga: <span class="hamwi__number"></span> - <span class="miller__number"></span>
-                    </h1>
-                </header>
-                <p class="ideal__text">
-                    Twoja prawidłowa waga powinna wynosić <span class="hamwi__number"></span> - <span
-                        class="miller__number"></span> bazując na różnych
-                    formułach przedstawionych poniżej. Formuły te bazują na wzroście i reprezentują przeciętną, dlatego
-                    uzyskany wynik nie zawsze odzwieciedla rzeczywistość. <span class="ideal__bold">zwłaszcza jeżeli
-                        trenujesz siłowo</span>
-                </p>
-                <div class="horizontal__line"></div>
-                <div class="hamwi__rate calrate">
-                    <p class="hamwi__text">G.J Hamwi Formula(1964)</p>
-                    <p class="hamwi__number"></p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="devine__rate calrate">
-                    <p class="devine__text">B.J Devine Formula(1974)</p>
-                    <p class="devine__number"></p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="robinson__rate calrate">
-                    <p class="robinson__text">J.D Robinson Formula(1983)</p>
-                    <p class="robinson__number"></p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="miller__rate calrate">
-                    <p class="miller__text">D.R Miller Formula(1983)</p>
-                    <p class="miller__number"></p>
-                </div>
-            </article>
-        </div>
-        <div class="bmi__wraper">
-            <article class="bmi">
-                <header class="bmi__header">
-                    <h1 class="bmi__heading">
-                        Twój wskaźnik BMI: <span class="bmi__span"></span>
-                    </h1>
-                </header>
-                <p class="bmi__text">
-                    Twoje BMI wynosi <span class="bmi__span"></span>, co według WHO oznacza <span
-                        class="bmi__classified">nadwagę</span>...
-                </p>
-                <div class="horizontal__line"></div>
-                <div class="bmi__underweight calrate">
-                    <p class="underweight__scale">18.5 lub mniej</p>
-                    <p class="underweight__bmi">Niedowaga</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="bmi__normal calrate">
-                    <p class="normal__scale">18.5 - 24.99</p>
-                    <p class="normal__bmi">Prawidłowa waga</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="bmi__overweight calrate">
-                    <p class="overweight__scale">25 - 29.99</p>
-                    <p class="overweight__bmi">Nadwaga</p>
-                </div>
-                <div class="horizontal__line"></div>
-                <div class="bmi__obese calrate">
-                    <p class="obese__scale">30+</p>
-                    <p class="obese__bmi">Otyłość</p>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -274,8 +300,7 @@
                 <a href="#" class="contact footlink">Kontakt</a>
             </div>
             <div class="copyright__flex">
-                <img src="/img/copyright (1).svg" alt="copyright" class="footer__copyright">
-                <p class="footer__copyright-text">2020 kalkulatorkalorii.pl</p>
+                <p class="footer__copyright-text">©2020 kalkulatorkalorii.pl</p>
             </div>
         </div>
     </footer>

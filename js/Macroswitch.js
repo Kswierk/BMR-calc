@@ -26,7 +26,7 @@ class Macroswitch {
 
     maintenanceMacros() {
 
-        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na ${this.caloriesValue.innerHTML} kalorii dzienie`;
+        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na <strong>${this.caloriesValue.innerHTML} kalorii</strong> dziennie.`;
 
         this.moderateProteinIntake = Math.floor(this.caloriesValue.innerHTML * 0.25 / 4);
         this.moderateFatIntake = Math.floor(this.caloriesValue.innerHTML * 0.4 / 9);
@@ -56,7 +56,7 @@ class Macroswitch {
     }
 
     cutMacros() {
-        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na ${Math.floor(this.caloriesValue.innerHTML * 0.85)} kalorii dzienie, co oznacza 15% deficyt kaloryczny od Twojego dziennego zapotrzebowania`;
+        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na <strong>${Math.floor(this.caloriesValue.innerHTML * 0.85)} kalorii</strong> dzienie, co oznacza 15% deficyt kaloryczny od Twojego dziennego zapotrzebowania.`;
 
         this.moderateProteinIntake = Math.floor((this.caloriesValue.innerHTML * 0.85) * 0.25 / 4);
         this.moderateFatIntake = Math.floor((this.caloriesValue.innerHTML * 0.85) * 0.4 / 9);
@@ -87,7 +87,7 @@ class Macroswitch {
 
     bulkMacros() {
 
-        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na ${Math.floor(this.caloriesValue.innerHTML * 1.15)} kalorii dzienie, co oznacza 15% surplus kaloryczny do Twojego dziennego zapotrzebowania`;
+        this.macroText.innerHTML = `Taki rozkład makroskładników odpowiada zapotrzebowaniu na <strong>${Math.floor(this.caloriesValue.innerHTML * 1.15)} kalorii</strong> dzienie, co oznacza 15% surplus kaloryczny do Twojego dziennego zapotrzebowania.`;
 
         this.moderateProteinIntake = Math.floor((this.caloriesValue.innerHTML * 1.15) * 0.25 / 4);
         this.moderateFatIntake = Math.floor((this.caloriesValue.innerHTML * 1.15) * 0.4 / 9);

@@ -1,5 +1,6 @@
 .footer {
-    background-color: #ddd;
+    background-color: $darkcontrast;
+    color: $main;
     font-size: 1.2em;
 
     .footer__column {
@@ -11,7 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 20px 0 40px 0;
+            margin: 20px 0 30px 0;
             font-size: 1em;
 
             .footer__copyright {
@@ -27,8 +28,9 @@
             margin: 20px 0;
 
             .footlink {
-                padding: 10px;
+                padding: 10px 30px;
                 text-decoration: none;
+                color: $main;
                 cursor: pointer;
             }
         }

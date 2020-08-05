@@ -2,16 +2,17 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 60px;
 
     .bmi {
         .bmi__header {
-            margin: 30px auto;
+            margin: 40px auto;
             font-size: 1.2em;
         }
     }
 
     .bmi__text {
-        margin: 40px auto;
+        margin: 40px 0;
         font-size: 1.2em;
 
         .bmi__classified,
@@ -23,7 +24,7 @@
     .calrate {
         display: flex;
         justify-content: space-around;
-        margin: 20px;
+        margin: 20px 0;
         font-size: 1.2em;
     }
 }
