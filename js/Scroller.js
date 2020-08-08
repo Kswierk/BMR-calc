@@ -39,11 +39,11 @@ class Scroller {
 
         if (this.badValues) {
             return this.ageInput.style.border = '1px solid red',
-                this.ageInput.setAttribute('placeholder', 'wpisz dane'),
+                this.ageInput.setAttribute('placeholder', 'uzupełnij dane'),
                 this.weightInput.style.border = '1px solid red',
-                this.weightInput.setAttribute('placeholder', 'wpisz dane'),
+                this.weightInput.setAttribute('placeholder', 'uzupełnij dane'),
                 this.heightInput.style.border = '1px solid red',
-                this.heightInput.setAttribute('placeholder', 'wpisz dane'),
+                this.heightInput.setAttribute('placeholder', 'uzupełnij dane'),
 
                 this.hideResults();
         }

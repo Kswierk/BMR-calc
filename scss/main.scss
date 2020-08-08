@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 
 //abstracts
@@ -11,6 +11,7 @@
 //components
 @import 'components/horizontal-line';
 @import 'components/macro-box';
+@import 'components/faq-box';
 
 //layout
 
@@ -22,3 +23,6 @@
 @import 'layout/ideal-weight';
 @import 'layout/bmi';
 @import 'layout/footer';
+@import 'layout/terms';
+@import 'layout/qa';
+@import 'layout/contact';

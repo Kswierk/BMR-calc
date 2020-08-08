@@ -6,9 +6,8 @@
 .macro__square {
     background-color: $darkcontrast;
     color: $secondary;
-    width: 90%;
-    max-width: 400px;
-    min-width: 300px;
+    max-width: 450px;
+    min-width: 400px;
     margin: 40px auto;
     margin-bottom: 40px;
     border-radius: 30px;
@@ -54,6 +53,7 @@
 
     .macro__square {
         max-width: 300px;
+        min-width: 300px;
     }
 }
 

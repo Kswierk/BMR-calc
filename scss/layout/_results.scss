@@ -7,6 +7,8 @@
 
 .results {
     display: none;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .flex__wraper {
         display: flex;
@@ -20,7 +22,7 @@
             color: $main;
             border-radius: 30px;
             max-width: 600px;
-            padding: 40px 10px;
+            padding: 10px;
 
             .results__header {
                 margin: 40px 0 30px 0;
@@ -36,7 +38,7 @@
                 .calories__perday,
                 .calories__perweek {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     margin: 60px 0;
                     font-size: 1.6em;
                 }

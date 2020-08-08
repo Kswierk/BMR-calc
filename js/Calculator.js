@@ -71,20 +71,20 @@ class Calculator {
             this.bestCalories.innerHTML = Math.floor(this.mensIntake);
             this.noneCaloriesRate.innerHTML = this.mensBase;
             this.lowCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.2);
-            this.moderateCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.4);
-            this.highModerateCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.6);
-            this.highCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.8);
-            this.vhighCaloriesRate.innerHTML = Math.floor(this.mensBase * 2);
+            this.moderateCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.375);
+            this.highModerateCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.55);
+            this.highCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.725);
+            this.vhighCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.9);
         } else {
             this.dailyIntake.innerHTML = Math.floor(this.womensIntake);
             this.weeklyIntake.innerHTML = Math.floor(this.womensIntake * 7);
             this.bestCalories.innerHTML = Math.floor(this.womensIntake);
             this.noneCaloriesRate.innerHTML = this.womensBase;
             this.lowCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.2);
-            this.moderateCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.4);
-            this.highModerateCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.6);
-            this.highCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.8);
-            this.vhighCaloriesRate.innerHTML = Math.floor(this.womensBase * 2);
+            this.moderateCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.375);
+            this.highModerateCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.55);
+            this.highCaloriesRate.innerHTML = Math.floor(this.womensBase * 1.725);
+            this.vhighCaloriesRate.innerHTML = Math.floor(this.womensBase * 9);
         }
     }
 

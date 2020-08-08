@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
     &:focus {
         outline: none;
@@ -10,7 +10,11 @@
 }
 
 body {
-    background-color: #faffff;
+    background: linear-gradient(90deg, $main 0%, $main 10%, rgba(238,238,238,1) 10%, rgba(238,238,238,1) 50%, rgba(238,238,238,1) 90%, $main 90%, $main 100%);
+}
+.max-width {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 
