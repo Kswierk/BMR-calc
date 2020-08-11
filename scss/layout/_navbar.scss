@@ -6,7 +6,7 @@
     background-color: $darkcontrast;
 
     .logo {
-        height: 60px;
+        height: 45px;
 
         .logo__img {
             height: 100%;
@@ -15,24 +15,21 @@
 
     .navbar__list {
         display: flex;
-        width: 40%;
-        justify-content: space-around;
+        width: 50%;
+        justify-content: space-evenly;
         z-index: 2;
+        margin-left: 20px;
 
         .navbar__item {
 
             list-style: none;
 
             .navbar__link {
+                text-transform: uppercase;
                 text-decoration: none;
-                color: $main;
+                color: $white;
                 letter-spacing: 2px;
-                font-size: 1.2em;
                 transition: .3s;
-
-                &:hover {
-                    color: $secondary;
-                }
             }
         }
     }
@@ -47,7 +44,7 @@
             height: 3px;
             border-radius: 2px;
             margin: 5px;
-            background-color: $main;
+            background-color: $contrast;
         }
     }
 }
@@ -76,7 +73,7 @@
             height: 92vh;
             width: 100%;
             top: 8vh;
-            background-color: $secondary;
+            background-color: $main;
             color: $darkcontrast;
             transform: translateX(100%);
             transition: all .4s ease-in;
@@ -85,10 +82,10 @@
                 opacity: 0;
 
                 .navbar__link {
-                    color: $darkcontrast;
+                    color: $contrast;
 
                     &:hover {
-                        color: $contrast;
+                        color: $darkcontrast;
                     }
                 }
             }

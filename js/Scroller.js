@@ -12,10 +12,10 @@ class Scroller {
         this.btn.addEventListener('click', () => {
             setTimeout(() => {
                 this.showResults();
-                this.scrollToSection();
             }, 300);
         });
     }
+
 
     scrollToSection() {
         this.rootElement.scrollIntoView({
@@ -23,6 +23,7 @@ class Scroller {
             block: 'start',
         });
     }
+
 
 
 
@@ -48,8 +49,12 @@ class Scroller {
                 this.hideResults();
         }
 
+        setTimeout(() => {
+            this.scrollToSection(), 300
+        })
+
         this.resultsSection.classList.add('show-results');
-        this.resultsHeading.classList.add('show-results');
+
 
         this.ageInput.style.border = "1px solid black";
         this.weightInput.style.border = "1px solid black";
@@ -61,6 +66,7 @@ class Scroller {
 
     hideResults() {
         this.resultsSection.classList.remove('show-results');
+
     }
 }
 

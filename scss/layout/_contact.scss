@@ -7,6 +7,9 @@
 
    .contact__header{
        font-size: 2em;
+       .contact__red {
+           color: $darkcontrast;
+       }
    }
 
    .contact__details{
