@@ -160,13 +160,13 @@ class Calculator {
 
         if (this.activityLevel.value === '1') this.base.classList.add('active__bold');
         else if (this.activityLevel.value === '1.2') this.low.classList.add('active__bold');
-        else if (this.activityLevel.value === '1.4')
+        else if (this.activityLevel.value === '1.375')
             this.moderate.classList.add('active__bold');
-        else if (this.activityLevel.value === '1.6')
+        else if (this.activityLevel.value === '1.55')
             this.highModerate.classList.add('active__bold');
-        else if (this.activityLevel.value === '1.8')
+        else if (this.activityLevel.value === '1.725')
             this.high.classList.add('active__bold');
-        else if (this.activityLevel.value === '2')
+        else if (this.activityLevel.value === '1.9')
             this.vhigh.classList.add('active__bold');
 
 

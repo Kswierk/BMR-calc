@@ -62,7 +62,7 @@
     .navbar {
 
         .logo {
-            height: 60px;
+            height: 40px;
         }
 
         .navbar__list {
@@ -73,7 +73,7 @@
             height: 92vh;
             width: 100%;
             top: 8vh;
-            background-color: $main;
+            background-color: $darkcontrast;
             color: $darkcontrast;
             transform: translateX(100%);
             transition: all .4s ease-in;
@@ -83,10 +83,6 @@
 
                 .navbar__link {
                     color: $contrast;
-
-                    &:hover {
-                        color: $darkcontrast;
-                    }
                 }
             }
         }
@@ -101,6 +97,14 @@
         }
     }
 
+}
+
+@media(max-width:600px){
+    .navbar {
+
+        .logo {
+            height: 35px;
+        }}
 }
 
 

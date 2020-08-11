@@ -43,7 +43,7 @@ input::-webkit-inner-spin-button {
   border: 2px solid #252a34;
   color: #252a34;
   max-width: 450px;
-  min-width: 400px;
+  min-width: 320px;
   margin: 40px auto;
   margin-bottom: 40px;
   border-radius: 30px;
@@ -78,6 +78,11 @@ input::-webkit-inner-spin-button {
   background-color: #3a86ff;
 }
 
+@media (min-width: 600px) {
+  .macro__square {
+    min-width: 400px;
+  }
+}
 @media (min-width: 1000px) {
   .square__flex {
     flex-direction: row;
@@ -169,7 +174,7 @@ html {
   }
 
   .navbar .logo {
-    height: 60px;
+    height: 40px;
   }
   .navbar .navbar__list {
     flex-direction: column;
@@ -179,7 +184,7 @@ html {
     height: 92vh;
     width: 100%;
     top: 8vh;
-    background-color: #252a34;
+    background-color: #3a86ff;
     color: #3a86ff;
     transform: translateX(100%);
     transition: all 0.4s ease-in;
@@ -190,15 +195,17 @@ html {
   .navbar .navbar__list .navbar__item .navbar__link {
     color: #f5f5f5;
   }
-  .navbar .navbar__list .navbar__item .navbar__link:hover {
-    color: #3a86ff;
-  }
   .navbar .burger {
     display: block;
     cursor: pointer;
   }
   .navbar .burger .burger__line {
     transition: all 0.4s ease;
+  }
+}
+@media (max-width: 600px) {
+  .navbar .logo {
+    height: 35px;
   }
 }
 .navbar__list.navbar__list--active {
@@ -230,8 +237,11 @@ html {
 .informative__heading {
   text-align: center;
   margin: 50px 0 20px 0;
-  font-size: 2.6em;
   line-height: 40px;
+  font-weight: 400;
+}
+.informative__heading .informative__blue {
+  color: #3a86ff;
 }
 
 .front__wrapper {
@@ -250,18 +260,24 @@ html {
   line-height: 30px;
 }
 
+@media (min-width: 600px) {
+  .informative__heading {
+    font-size: 2.5em;
+  }
+}
 @media (min-width: 1200px) {
   .front__wrapper {
     flex-direction: row;
     justify-content: center;
   }
 
+  .informative__heading {
+    font-size: 3.1em;
+    line-height: 50px;
+  }
+
   .informative {
     width: 40vw;
-  }
-  .informative .informative__heading {
-    font-size: 3.3em;
-    line-height: 50px;
   }
   .informative .informative__subheader {
     margin: 60px 20px 0 20px;
@@ -287,7 +303,7 @@ html {
   cursor: pointer;
 }
 .params .param__form .param__wrap .calculate__btn {
-  margin: 80px auto;
+  margin: 40px auto;
   border-radius: 20px;
   border: none;
   background-color: #3a86ff;
@@ -421,7 +437,7 @@ html {
 .macro .macro__links .macro__link {
   margin: 10px;
   width: 180px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   cursor: pointer;
   padding: 10px;
   background-color: #3a86ff;
@@ -449,6 +465,7 @@ html {
   .macro .macro__links .macro__link {
     padding: 20px;
     margin: 0 3%;
+    font-size: 1.3em;
   }
 }
 .first__page {
