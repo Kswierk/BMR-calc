@@ -4,8 +4,8 @@
 }
 
 .macro__square {
-    background-color: $darkcontrast;
-    color: $secondary;
+    background-color: $contrast;
+    color: $main;
     max-width: 450px;
     min-width: 400px;
     margin: 40px auto;
@@ -36,10 +36,10 @@
         &:after {
             content: "";
             display: block;
-            height: 1px;
+            height: 2px;
             width: 80%;
             margin: 0 auto;
-            background-color: $main;
+            background-color: $darkcontrast;
         }
     }
 }
@@ -48,18 +48,19 @@
     .square__flex {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
     }
 
     .macro__square {
         max-width: 300px;
-        min-width: 300px;
     }
 }
 
 @media(min-width: 1400px) {
 
     .macro__square {
-        max-width: 400px;
+        max-width: 360px;
+        min-width: 360px;
     }
 }

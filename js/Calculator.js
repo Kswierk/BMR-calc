@@ -1,3 +1,5 @@
+
+
 class Calculator {
     constructor() {
         this.gender = null;
@@ -30,6 +32,7 @@ class Calculator {
 
         this.addListeners()
     }
+
 
     addListeners() {
         this.calcBtn.addEventListener('click', () => {
@@ -179,6 +182,7 @@ class Calculator {
         this.vhigh.classList.remove('active__bold');
     }
 }
+
 
 const calc = new Calculator;
 

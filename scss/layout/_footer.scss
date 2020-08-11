@@ -1,7 +1,6 @@
 .footer {
     background-color: $darkcontrast;
-    color: $main;
-    font-size: 1.2em;
+    color: $white;
 
     .footer__column {
         display: flex;
@@ -13,7 +12,6 @@
             justify-content: center;
             align-items: center;
             margin: 20px 0 30px 0;
-            font-size: 1em;
 
             .footer__copyright {
                 height: 15px;
@@ -34,8 +32,10 @@
             .footlink {
                 padding: 10px 30px;
                 text-decoration: none;
-                color: $main;
+                text-transform: uppercase;
+                color: $white;
                 cursor: pointer;
+                transition: .3s;
             }
         }
     }
