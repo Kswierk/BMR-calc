@@ -149,7 +149,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 7vh;
+  min-height: 8vh;
   background-color: #3a86ff;
 }
 .navbar .logo {
@@ -195,16 +195,16 @@ html {
   }
 
   .navbar .logo {
-    height: 35px;
+    height: 40px;
   }
   .navbar .navbar__list {
     flex-direction: column;
     align-items: center;
     position: absolute;
     right: 0px;
-    height: 93vh;
+    height: 92vh;
     width: 100%;
-    top: 7vh;
+    top: 8vh;
     background-color: #3a86ff;
     color: #3a86ff;
     transform: translateX(100%);
@@ -222,11 +222,6 @@ html {
   }
   .navbar .burger .burger__line {
     transition: all 0.4s ease;
-  }
-}
-@media (max-width: 600px) {
-  .navbar .logo {
-    height: 35px;
   }
 }
 .navbar__list.navbar__list--active {
@@ -323,6 +318,7 @@ html {
   font-size: 0.9em;
   margin-bottom: 15px;
   padding: 0 7px;
+  border: 1px solid black;
 }
 .params .param__form .param__wrap #gender__value,
 .params .param__form .param__wrap #activity__level {
