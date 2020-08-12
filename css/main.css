@@ -318,7 +318,7 @@ html {
   font-size: 0.9em;
   margin-bottom: 15px;
   padding: 0 7px;
-  border: 1px solid black;
+  border: 1px solid #252a34;
 }
 .params .param__form .param__wrap #gender__value,
 .params .param__form .param__wrap #activity__level {
