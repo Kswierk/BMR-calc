@@ -44,7 +44,7 @@ input::-webkit-inner-spin-button {
   color: #252a34;
   max-width: 450px;
   min-width: 320px;
-  margin: 40px auto;
+  margin: 25px auto;
   margin-bottom: 40px;
   border-radius: 30px;
   padding: 10px;
@@ -104,7 +104,7 @@ input::-webkit-inner-spin-button {
 .qa-box {
   max-width: 1200px;
   margin: 40px auto;
-  width: 80%;
+  width: 90%;
   border-radius: 20px;
   border-top: none;
   background-color: #f5f5f5;
@@ -116,6 +116,7 @@ input::-webkit-inner-spin-button {
   padding: 20px;
   border-radius: 19px 19px 0 0;
   font-size: 1.3em;
+  font-weight: 400;
 }
 .qa-box .qa-box__text {
   margin: 20px;
@@ -124,15 +125,35 @@ input::-webkit-inner-spin-button {
   padding: 10px;
 }
 
+@media (min-width: 1200px) {
+  .qa-box .qa-box__text {
+    font-size: 1.2em;
+  }
+}
+.standard-btn {
+  margin: 40px auto;
+  border-radius: 20px;
+  border: none;
+  background-color: #3a86ff;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 0.4em 2.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.standard-btn:focus {
+  outline: none;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 7vh;
   background-color: #3a86ff;
 }
 .navbar .logo {
-  height: 45px;
+  height: 40px;
 }
 .navbar .logo .logo__img {
   height: 100%;
@@ -174,16 +195,16 @@ html {
   }
 
   .navbar .logo {
-    height: 40px;
+    height: 35px;
   }
   .navbar .navbar__list {
     flex-direction: column;
     align-items: center;
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 93vh;
     width: 100%;
-    top: 8vh;
+    top: 7vh;
     background-color: #3a86ff;
     color: #3a86ff;
     transform: translateX(100%);
@@ -234,10 +255,14 @@ html {
     transform: translateX(0px);
   }
 }
+.first__page {
+  min-height: 100vh;
+}
+
 .informative__heading {
   text-align: center;
   margin: 50px 0 20px 0;
-  line-height: 40px;
+  line-height: 50px;
   font-weight: 400;
 }
 .informative__heading .informative__blue {
@@ -288,28 +313,30 @@ html {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 60vw;
+  width: 70vw;
 }
 .params .param__form .param__wrap .param__label {
   font-size: 1.1em;
 }
 .params .param__form .param__wrap .param__value {
   height: 40px;
-  font-size: 1em;
+  font-size: 0.9em;
   margin-bottom: 15px;
+  padding: 0 7px;
 }
 .params .param__form .param__wrap #gender__value,
 .params .param__form .param__wrap #activity__level {
   cursor: pointer;
+  background-color: white;
 }
 .params .param__form .param__wrap .calculate__btn {
   margin: 40px auto;
-  border-radius: 20px;
+  border-radius: 40px;
   border: none;
   background-color: #3a86ff;
   color: #fff;
   font-size: 1.2em;
-  padding: 0.4em 2.5em;
+  padding: 0.7em 2.8em;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -324,6 +351,9 @@ html {
   }
   .params .param__form .param__wrap .calculate__btn {
     margin: 30px auto;
+  }
+  .params .param__form .param__wrap .param__value {
+    font-size: 1em;
   }
 }
 .results__mainheading {
@@ -345,7 +375,7 @@ html {
   align-items: center;
 }
 .results .flex__wraper .results__section {
-  margin: 40px 20px;
+  margin: 40px;
   background-color: #f5f5f5;
   color: #252a34;
   border-radius: 30px;
@@ -377,7 +407,7 @@ html {
 }
 .results .flex__wraper .stats__info {
   font-size: 1.2em;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 .results .flex__wraper .stats__info .stats__text {
   margin: 30px 0;
@@ -431,18 +461,19 @@ html {
 }
 .macro .macro__links {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .macro .macro__links .macro__link {
   margin: 10px;
   width: 180px;
-  font-size: 1.1em;
   cursor: pointer;
   padding: 10px;
   background-color: #3a86ff;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 40px;
 }
 .macro .macro__text {
   margin: 40px 20px;
@@ -461,17 +492,18 @@ html {
   text-align: center;
 }
 
+@media (min-width: 400px) {
+  .macro .macro__links {
+    flex-direction: row;
+  }
+}
 @media (min-width: 600px) {
   .macro .macro__links .macro__link {
-    padding: 20px;
+    padding: 15px;
     margin: 0 3%;
     font-size: 1.3em;
   }
 }
-.first__page {
-  min-height: 100vh;
-}
-
 .ideal-bmi__flex {
   display: flex;
   flex-direction: column;
@@ -484,7 +516,7 @@ html {
   text-align: center;
 }
 .ideal-weight__wraper .ideal__weight {
-  margin: 40px 20px;
+  margin: 40px;
 }
 .ideal-weight__wraper .ideal__weight .ideal__header {
   margin: 30px 0;
@@ -546,6 +578,7 @@ html {
 }
 
 .footer {
+  min-height: 108px;
   background-color: #3a86ff;
   color: #fff;
 }
@@ -558,7 +591,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 30px 0;
+  margin: 15px 0 20px 0;
 }
 .footer .footer__column .copyright__flex .footer__copyright {
   height: 15px;
@@ -593,33 +626,29 @@ html {
 }
 .min-height .terms__main {
   text-align: center;
-  margin: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
-.min-height .terms__main .terms__header {
-  margin: 40px;
-}
 .min-height .terms__main .terms__header .terms__heading {
-  margin: 40px;
-  font-size: 2.8em;
+  margin: 40px 0;
+  font-size: 2.1em;
 }
 .min-height .terms__main .terms__header .terms__subheader {
-  font-size: 1.8em;
+  font-size: 1.4em;
+  font-weight: 400;
 }
 .min-height .terms__main .terms {
-  margin: 100px 0;
+  margin: 60px 20px;
   list-style: none;
   text-align: left;
 }
 .min-height .terms__main .terms .term__big {
-  font-size: 1.6em;
+  font-size: 1.3em;
   font-weight: 600;
   margin: 30px 0;
 }
 .min-height .terms__main .terms .term {
   margin: 15px;
-  font-size: 1.2em;
 }
 
 .qa {
@@ -628,53 +657,86 @@ html {
 }
 .qa .qa__header .qa__heading {
   text-align: center;
-  font-size: 3em;
-  padding: 1em;
+  font-size: 2.5em;
+  margin: 40px 0;
 }
 .qa .qa__header .qa__text {
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin: 30px;
 }
 
-.contact__main {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em 15px;
   text-align: center;
 }
-.contact__main .contact__header {
-  font-size: 1.1em;
-  padding: 50px;
+.contact-header .contact-h1 {
+  font-size: 2.5em;
+  font-weight: 400;
 }
-.contact__main .contact__header .contact__blue {
+.contact-header .contact-h1 .contact-blue {
   color: #3a86ff;
-  font-size: 1.4em;
 }
-.contact__main .contact__details {
-  font-size: 1.4em;
-}
-.contact__main .contact__details .contact__me {
-  font-size: 1.5em;
-  margin-bottom: 30px;
+.contact-header .contact-h2 {
+  margin: 1em auto;
+  font-size: 1em;
 }
 
-.contact__footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contact-main .contact-form div input {
+  margin: 1em auto;
+  height: 2.5em;
+  font-size: 1.1em;
+  width: 70vw;
+  padding: 0.7em;
+}
+.contact-main .contact-form textarea {
+  resize: none;
+  width: 70vw;
+  padding: 0.7em;
+  font-size: 1.1em;
+}
+.contact-main .contact-form .form-header {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.contact-main .contact-details {
+  margin: 0 0 2em 0;
+  font-size: 1.3em;
+}
+.contact-main .contact-details .contact-me {
+  margin: 10px 0;
+  font-size: 1.3em;
 }
 
-@media (min-width: 600px) {
-  .contact__main .contact__header {
-    font-size: 2em;
+@media (min-width: 800px) {
+  .contact-main {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
-  .contact__main .contact__details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.4em;
-    margin: 10px;
-    margin-bottom: 50px;
+  .contact-main .contact-form {
+    margin-right: 80px;
+  }
+  .contact-main .contact-form div input {
+    width: 40vw;
+    margin-bottom: 30px;
+  }
+  .contact-main .contact-form textarea {
+    width: 40vw;
+  }
+  .contact-main .contact-header .contact-h1 {
+    font-size: 3em;
+  }
+  .contact-main .contact-details {
+    font-size: 1.5em;
+    margin: auto 4em;
+    padding-bottom: 4em;
   }
 }

@@ -1,7 +1,7 @@
 .qa-box {
     max-width: 1200px;
     margin: 40px auto;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
     border-top: none;
     background-color: $contrast;
@@ -14,6 +14,7 @@
         padding: 20px;
         border-radius: 19px 19px 0 0;
         font-size: 1.3em;
+        font-weight: $font-normal;
 
     }
 
@@ -22,5 +23,13 @@
         font-size: 1.1em;
         line-height: 1.4em;
         padding: 10px;
+    }
+}
+
+@media(min-width: 1200px){
+    .qa-box{
+        .qa-box__text{
+            font-size: 1.2em;
+        }
     }
 }

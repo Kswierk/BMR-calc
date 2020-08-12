@@ -29,15 +29,36 @@
                 <div class="burger__line burger__line--line3"></div>
             </div>
         </nav>
-        <section class="contact__main">
-            <header class="contact__header">
-                <h1 class="contact__heading"><span class="contact__blue">Masz jakieś pytania?</span></h1>
-            </header>
-            <div class="contact__details">
-                <p class="contact__me">Napisz do nas na:</p>
-                <p class="contact__mail">kontakt@twojemakro.pl</p>
+        <header class="contact-header">
+            <h1 class="contact-h1"><span class="contact-blue">Masz jakieś pytania?</span> Interesuje cię nasza pomoc?
+            </h1>
+            <h2 class="contact-h2">Skontaktuj się z nami!</h2>
+        </header>
+        <section class="contact-main">
+            <div class="contact-details">
+                <h2 class="contact-me">Adres email:</h2>
+                <div class="mail">kacper.swierk@gmail.com</div>
             </div>
+
+            <div class="contact-form">
+                <p class="form-header">Formularz kontaktowy: </p>
+                <form action="https://formspree.io/mvowyqjq" method="POST">
+                    <div>
+                        <label for="email"></label>
+                        <input id="email" name="_replyto" placeholder="Adres e-mail" type="email" required>
+                    </div>
+                    <div>
+                        <label class="textarea" for="content"></label>
+                        <textarea name="content" id="content" cols="30" rows="5" placeholder="Tresć wiadomości"
+                            required></textarea>
+                    </div>
+                    <button class="standard-btn" type="submit">Wyślij</button>
+                </form>
+            </div>
+
         </section>
+
+
         <footer class="footer contact__footer">
             <div class="footer__column">
 

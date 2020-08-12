@@ -14,18 +14,19 @@
 
     .macro__links {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         text-align: center;
 
         .macro__link {
             margin: 10px;
             width: 180px;
-            font-size: 1.1em;
             cursor: pointer;
             padding: 10px;
             background-color: $darkcontrast;
             color: $white;
-            border-radius: 10px;
+            border-radius: 40px;
         }
     }
 
@@ -48,13 +49,23 @@
     }
 }
 
+@media(min-width: 400px) {
+    .macro {
+
+        .macro__links {
+flex-direction: row;
+            
+        }
+    }
+}
+
 @media(min-width:600px) {
     .macro {
 
         .macro__links {
 
             .macro__link {
-                padding: 20px;
+                padding: 15px;
                 margin: 0 3%;
                 font-size: 1.3em;
             }

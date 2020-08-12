@@ -1,3 +1,4 @@
+
 .params {
 
     .param__form {
@@ -7,7 +8,7 @@
             display: flex;
             flex-direction: column;
             margin: 0 auto;
-            width: 60vw;
+            width: 70vw;
 
             .param__label {
                 font-size: 1.1em;
@@ -16,27 +17,25 @@
 
             .param__value {
                 height: 40px;
-                font-size: 1em;
+                font-size: .9em;
                 margin-bottom: 15px;
-            }
+                padding: 0 7px;
+           }
 
             #gender__value,
             #activity__level {
                 cursor: pointer;
+                background-color: white;
             }
-
-
-
-
 
             .calculate__btn {
                 margin: 40px auto;
-                border-radius: 20px;
+                border-radius: 40px;
                 border: none;
                 background-color: $darkcontrast;
                 color: #fff;
                 font-size: 1.2em;
-                padding: .4em 2.5em;
+                padding: .7em 2.8em;
                 cursor: pointer;
                 transition: .3s;
 
@@ -44,7 +43,6 @@
                     outline: none;
                 }
             }
-
         }
     }
 }
@@ -58,6 +56,9 @@
 
                 .calculate__btn {
                     margin: 30px auto;
+                }
+                .param__value{
+                    font-size: 1em;
                 }
             }
         }

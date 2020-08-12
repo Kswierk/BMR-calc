@@ -71,7 +71,7 @@ class Calculator {
         if (this.gender.value === 'male') {
             this.dailyIntake.innerHTML = Math.floor(this.mensIntake);
             this.weeklyIntake.innerHTML = Math.floor(this.mensIntake * 7);
-            this.bestCalories.innerHTML = Math.floor(this.mensIntake);
+            this.bestCalories.innerHTML = `${Math.floor(this.mensIntake)} kalorii`;
             this.noneCaloriesRate.innerHTML = this.mensBase;
             this.lowCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.2);
             this.moderateCaloriesRate.innerHTML = Math.floor(this.mensBase * 1.375);

@@ -1,49 +1,98 @@
-.contact__main {
-   position: absolute;
-   top:42%;
-   left:50%;
-   transform: translate(-50%,-50%);
-   text-align: center;
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 15px;
+    text-align: center;
 
-   .contact__header{
-       font-size: 1.1em;
-       padding: 50px;   
-       .contact__blue {
-           color: $darkcontrast;
-           font-size: 1.4em;
 
-       }
-   }
+    .contact-h1 {
+        font-size: 2.5em;
+        font-weight: $font-normal;
 
-   .contact__details{
-       font-size: 1.4em;   
+        .contact-blue{
+            color: $darkcontrast;
+        }
+    }
 
-       .contact__me{
-           font-size: 1.5em;
-           margin-bottom: 30px;
-       }
-   }
+    .contact-h2 {
+        margin: 1em auto;
+        font-size: 1em;
+    }
 }
 
-.contact__footer{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-@media(min-width: 600px){
-    .contact__main{
-        .contact__header{
-            font-size: 2em;
+    .contact-form {
+
+
+        div input {
+            margin:1em auto;
+            height: 2.5em;
+            font-size: 1.1em;
+            width: 70vw;
+            padding: .7em;
         }
 
-        .contact__details{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.4em;
-            margin: 10px;
-            margin-bottom: 50px;
+        textarea {
+            resize: none;
+            width: 70vw;
+            padding: .7em;
+            font-size: 1.1em;
+        }
+
+        .form-header {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+    }
+
+    .contact-details {
+        margin: 0 0 2em 0;
+        font-size: 1.3em;
+
+        .contact-me{
+            margin: 10px 0;
+            font-size: 1.3em;
+        }
+    }
+}
+
+
+@media(min-width: 800px) {
+    .contact-main {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .contact-form {
+            margin-right: 80px;
+
+
+            div input {
+                width: 40vw;
+                margin-bottom: 30px;
+            }
+
+            textarea {
+                width: 40vw;
+            }
+        }
+
+        .contact-header{
+
+            .contact-h1{
+                font-size: 3em;
+            }
+        }
+
+        .contact-details {
+            font-size: 1.5em;
+            margin: auto 4em;
+            padding-bottom: 4em;
         }
     }
 }

@@ -59,10 +59,7 @@ class Scroller {
         this.ageInput.style.border = "1px solid black";
         this.weightInput.style.border = "1px solid black";
         this.heightInput.style.border = "1px solid black";
-
-
     }
-
 
     hideResults() {
         this.resultsSection.classList.remove('show-results');

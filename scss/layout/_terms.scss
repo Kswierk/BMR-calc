@@ -4,37 +4,35 @@
 
     .terms__main {
         text-align: center;
-        margin: 60px;
         max-width: 1200px;
         margin: 0 auto;
 
         .terms__header {
-            margin: 40px;
 
             .terms__heading {
-                margin: 40px;
-                font-size: 2.8em;
+                margin: 40px 0;
+                font-size: 2.1em;
             }
 
             .terms__subheader {
-                font-size: 1.8em;
+                font-size: 1.4em;
+                font-weight: $font-normal;
             }
         }
 
         .terms {
-            margin: 100px 0;
+            margin: 60px 20px;
             list-style: none;
             text-align: left;
 
             .term__big{
-                font-size: 1.6em;
+                font-size: 1.3em;
                 font-weight: $font-bold;
                 margin: 30px 0;
             }
 
             .term {
                 margin: 15px;
-                font-size: 1.2em;
             }
         }
     }
