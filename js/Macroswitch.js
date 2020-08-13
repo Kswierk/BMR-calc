@@ -52,6 +52,8 @@ class Macroswitch {
         this.highFats.innerHTML = this.highFatIntake;
         this.highCarbs.innerHTML = this.highCarbIntake;
 
+        this.addMaintanencelinkBoxshadow();
+
         this.dietType = 'maintenance';
     }
 
@@ -81,6 +83,7 @@ class Macroswitch {
         this.highProtein.innerHTML = this.highProteinIntake;
         this.highFats.innerHTML = this.highFatIntake;
         this.highCarbs.innerHTML = this.highCarbIntake;
+        this.addCutlinkBoxshadow();
 
         this.dietType = 'cut'
     }
@@ -113,7 +116,25 @@ class Macroswitch {
         this.highFats.innerHTML = this.highFatIntake;
         this.highCarbs.innerHTML = this.highCarbIntake;
 
+        this.addBulklinkBoxshadow();
+
         this.dietType = 'bulk'
+    }
+
+    addMaintanencelinkBoxshadow() {
+        this.maintenance.classList.add('macro__boxshadow');
+        this.bulk.classList.remove('macro__boxshadow');
+        this.cut.classList.remove('macro__boxshadow');
+    }
+    addCutlinkBoxshadow() {
+        this.cut.classList.add('macro__boxshadow');
+        this.maintenance.classList.remove('macro__boxshadow');
+        this.bulk.classList.remove('macro__boxshadow');
+    }
+    addBulklinkBoxshadow() {
+        this.bulk.classList.add('macro__boxshadow');
+        this.maintenance.classList.remove('macro__boxshadow');
+        this.cut.classList.remove('macro__boxshadow');
     }
 
     macroListeners() {
@@ -122,6 +143,7 @@ class Macroswitch {
         this.maintenance.addEventListener('click', () => this.maintenanceMacros());
 
     }
+
 }
 
 const macroswitch = new Macroswitch;
