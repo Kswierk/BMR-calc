@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
 }
 .standard-btn {
   margin: 40px auto;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   background-color: #3a86ff;
   color: #fff;
