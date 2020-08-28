@@ -13,14 +13,13 @@
         color: $white;
         padding: 20px;
         border-radius: 19px 19px 0 0;
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: $font-normal;
 
     }
 
     .qa-box__text {
         margin: 20px;
-        // font-size: 1.1em;
         line-height: 1.4em;
         padding: 10px;
     }
@@ -29,7 +28,7 @@
 @media(min-width: 1200px){
     .qa-box{
         .qa-box__text{
-            font-size: 1.1em;
+            font-size: 1em;
         }
     }
 }

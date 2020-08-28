@@ -21,9 +21,9 @@
 
         .macro__link {
             margin: 10px;
-            width: 180px;
+            width: 140px;
             cursor: pointer;
-            padding: 10px;
+            padding: 8px;
             background-color: $darkcontrast;
             color: $white;
             border-radius: 12px;
@@ -69,9 +69,7 @@ flex-direction: row;
         .macro__links {
 
             .macro__link {
-                padding: 15px;
                 margin: 0 3%;
-                font-size: 1.3em;
             }
         }
     }
