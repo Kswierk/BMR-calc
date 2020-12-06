@@ -1,67 +1,63 @@
-
 .params {
+  .param__form {
+    .param__wrap {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 70vw;
 
-    .param__form {
-        
+      .param__label {
+        font-size: 1.1em;
+        margin-bottom: 3px;
+      }
 
-        .param__wrap {
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-            width: 70vw;
+      .param__value {
+        height: 40px;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        padding: 0 7px;
+        border: 1px solid rgb(170, 170, 170);
+      }
 
-            .param__label {
-                font-size: 1.1em;
-                margin-bottom: 4px;
-            }
+      #gender__value,
+      #activity__level {
+        cursor: pointer;
+        background-color: white;
+      }
 
-            .param__value {
-                height: 40px;
-                font-size: .9em;
-                margin-bottom: 15px;
-                padding: 0 7px;
-                border: 1px solid rgb(170, 170, 170);
-           }
+      .calculate__btn {
+        margin: 40px auto;
+        border-radius: 12px;
+        border: none;
+        background-color: $darkcontrast;
+        color: #fff;
+        font-size: 1em;
+        padding: 0.8em 2.8em;
+        cursor: pointer;
+        transition: 0.3s;
 
-            #gender__value,
-            #activity__level {
-                cursor: pointer;
-                background-color: white;
-            }
-
-            .calculate__btn {
-                margin: 40px auto;
-                border-radius: 12px;
-                border: none;
-                background-color: $darkcontrast;
-                color: #fff;
-                font-size: 1em;
-                padding: .8em 2.8em;
-                cursor: pointer;
-                transition: .3s;
-
-                &:focus {
-                    outline: none;
-                }
-            }
+        &:focus {
+          outline: none;
         }
+      }
     }
+  }
 }
 
-@media(min-width:1200px) {
-    .params {
-        .param__form {
-            .param__wrap {
-                width: 30vw;
-                margin: 50px 100px;
+@media (min-width: 1200px) {
+  .params {
+    .param__form {
+      .param__wrap {
+        width: 30vw;
+        margin: 50px 100px;
 
-                .calculate__btn {
-                    margin: 30px auto;
-                }
-                .param__value{
-                    font-size: 1em;
-                }
-            }
+        .calculate__btn {
+          margin: 30px auto;
         }
+        .param__value {
+          font-size: 1em;
+        }
+      }
     }
+  }
 }

@@ -1,53 +1,52 @@
 .footer {
-    min-height: 108px;
-    background-color: $darkcontrast;
-    color: $white;
+  min-height: 108px;
+  background-color: $darkcontrast;
+  color: $white;
+  width: 100%;
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 
-    .footer__column {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
+    .copyright__flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 15px 0 20px 0;
 
-
-        .copyright__flex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 15px 0 20px 0;
-
-            .footer__copyright {
-                height: 15px;
-                margin-right: 5px;
-            }
-        }
-
-        .contact__flex {
-            position: relative;
-            display: flex;
-            width: 30%;
-            justify-content: space-around;   
-            left: 50%;
-            transform: translateX(-50%);
-
-            margin-top: 15px;
-
-            .footlink {
-                padding: 10px 30px;
-                text-decoration: none;
-                color: $white;
-                cursor: pointer;
-                transition: .3s;
-                font-size: .9em;
-            }
-        }
+      .footer__copyright {
+        height: 15px;
+        margin-right: 5px;
+      }
     }
+
+    .contact__flex {
+      position: relative;
+      display: flex;
+      width: 30%;
+      justify-content: space-around;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin-top: 15px;
+
+      .footlink {
+        padding: 10px 30px;
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.9em;
+      }
+    }
+  }
 }
 
-@media(max-width: 600px){
-    .footer{
-        .contact__flex{
-            flex-direction: column;
-            align-items: center;
-        }
+@media (max-width: 600px) {
+  .footer {
+    .contact__flex {
+      flex-direction: column;
+      align-items: center;
     }
+  }
 }
