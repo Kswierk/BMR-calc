@@ -1,31 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+/* line 1, ../coding/BMR-calc/scss/base/_base.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
+/* line 7, ../coding/BMR-calc/scss/base/_base.scss */
 *:focus {
   outline: none;
 }
 
+/* line 12, ../coding/BMR-calc/scss/base/_base.scss */
 .max-width {
   max-width: 1300px;
   margin: 0 auto;
 }
 
+/* line 17, ../coding/BMR-calc/scss/base/_base.scss */
 body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* line 23, ../coding/BMR-calc/scss/base/_base.scss */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/* line 1, ../coding/BMR-calc/scss/components/_horizontal-line.scss */
 .horizontal__line {
   display: block;
   height: 2px;
@@ -35,11 +42,13 @@ input::-webkit-inner-spin-button {
   transform: rotateX(45deg);
 }
 
+/* line 1, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .square__flex {
   display: flex;
   flex-direction: column;
 }
 
+/* line 6, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .macro__square {
   background-color: #f5f5f5;
   color: #252a34;
@@ -50,11 +59,15 @@ input::-webkit-inner-spin-button {
   border-radius: 30px;
   padding: 8px;
 }
+
+/* line 16, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .macro__square .protein,
 .macro__square .fats,
 .macro__square .carbs {
   font-size: 1.2em;
 }
+
+/* line 21, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .macro__square .protein .macro-big,
 .macro__square .fats .macro-big,
 .macro__square .carbs .macro-big {
@@ -63,12 +76,16 @@ input::-webkit-inner-spin-button {
   margin: 10px 0;
   text-align: center;
 }
+
+/* line 28, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .macro__square .protein .macro-text,
 .macro__square .fats .macro-text,
 .macro__square .carbs .macro-text {
   margin: 10px;
   text-align: center;
 }
+
+/* line 36, ../coding/BMR-calc/scss/components/_macro-box.scss */
 .macro__square .protein:after,
 .macro__square .fats:after {
   content: "";
@@ -80,28 +97,35 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 600px) {
+  /* line 48, ../coding/BMR-calc/scss/components/_macro-box.scss */
   .macro__square {
     min-width: 400px;
   }
 }
+
 @media (min-width: 1000px) {
+  /* line 55, ../coding/BMR-calc/scss/components/_macro-box.scss */
   .square__flex {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
   }
-
+  /* line 62, ../coding/BMR-calc/scss/components/_macro-box.scss */
   .macro__square {
     max-width: 300px;
   }
 }
+
 @media (min-width: 1400px) {
+  /* line 69, ../coding/BMR-calc/scss/components/_macro-box.scss */
   .macro__square {
     max-width: 360px;
     min-width: 360px;
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/components/_faq-box.scss */
 .qa-box {
   max-width: 1200px;
   margin: 40px auto;
@@ -111,6 +135,8 @@ input::-webkit-inner-spin-button {
   background-color: #f5f5f5;
   color: #252a34;
 }
+
+/* line 11, ../coding/BMR-calc/scss/components/_faq-box.scss */
 .qa-box .qa-box__title {
   background-color: #3a86ff;
   color: #fff;
@@ -119,6 +145,8 @@ input::-webkit-inner-spin-button {
   font-size: 1.1em;
   font-weight: 400;
 }
+
+/* line 21, ../coding/BMR-calc/scss/components/_faq-box.scss */
 .qa-box .qa-box__text {
   margin: 20px;
   line-height: 1.4em;
@@ -126,10 +154,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1200px) {
+  /* line 30, ../coding/BMR-calc/scss/components/_faq-box.scss */
   .qa-box .qa-box__text {
     font-size: 1em;
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/components/_submit-btn.scss */
 .standard-btn {
   margin: 40px auto;
   border-radius: 10px;
@@ -137,14 +168,17 @@ input::-webkit-inner-spin-button {
   background-color: #3a86ff;
   color: #fff;
   font-size: 1em;
-  padding: 0.5em 2.8em;
+  padding: .5em 2.8em;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
+
+/* line 12, ../coding/BMR-calc/scss/components/_submit-btn.scss */
 .standard-btn:focus {
   outline: none;
 }
 
+/* line 1, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -152,12 +186,18 @@ input::-webkit-inner-spin-button {
   min-height: 7vh;
   background-color: #3a86ff;
 }
+
+/* line 8, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .logo {
   height: 45px;
 }
+
+/* line 11, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .logo .logo__img {
   height: 100%;
 }
+
+/* line 16, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .navbar__list {
   display: flex;
   width: 50%;
@@ -165,9 +205,13 @@ input::-webkit-inner-spin-button {
   z-index: 2;
   margin-left: 20px;
 }
+
+/* line 23, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .navbar__list .navbar__item {
   list-style: none;
 }
+
+/* line 26, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .navbar__list .navbar__item .navbar__link {
   font-weight: 500;
   text-decoration: none;
@@ -176,9 +220,13 @@ input::-webkit-inner-spin-button {
   transition: 0.3s;
   font-size: 0.9em;
 }
+
+/* line 37, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .burger {
   display: none;
 }
+
+/* line 40, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar .burger .burger__line {
   display: block;
   width: 28px;
@@ -189,12 +237,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media (max-width: 800px) {
+  /* line 52, ../coding/BMR-calc/scss/layout/_navbar.scss */
   body,
-html {
+  html {
     overflow-x: hidden;
     position: relative;
   }
-
+  /* line 59, ../coding/BMR-calc/scss/layout/_navbar.scss */
   .navbar .navbar__list {
     flex-direction: column;
     align-items: center;
@@ -208,33 +257,42 @@ html {
     transform: translateX(100%);
     transition: all 0.4s ease-in;
   }
+  /* line 72, ../coding/BMR-calc/scss/layout/_navbar.scss */
   .navbar .navbar__list .navbar__item {
     opacity: 0;
   }
+  /* line 75, ../coding/BMR-calc/scss/layout/_navbar.scss */
   .navbar .navbar__list .navbar__item .navbar__link {
     color: #f5f5f5;
     font-size: 0.9em;
   }
+  /* line 82, ../coding/BMR-calc/scss/layout/_navbar.scss */
   .navbar .burger {
     display: block;
     cursor: pointer;
   }
+  /* line 86, ../coding/BMR-calc/scss/layout/_navbar.scss */
   .navbar .burger .burger__line {
     transition: all 0.4s ease;
   }
 }
+
+/* line 93, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .navbar__list.navbar__list--active {
   transform: translateX(0%);
 }
 
+/* line 97, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .toggle .burger__line--line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
+/* line 101, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .toggle .burger__line--line2 {
   opacity: 0;
 }
 
+/* line 105, ../coding/BMR-calc/scss/layout/_navbar.scss */
 .toggle .burger__line--line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -249,29 +307,38 @@ html {
     transform: translateX(0px);
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/layout/_informative.scss */
 .first__page {
-  min-height: 100vh;
+  min-height: calc(100vh - 108px);
 }
 
+/* line 4, ../coding/BMR-calc/scss/layout/_informative.scss */
 .informative__heading {
   text-align: center;
   margin: 50px 0 20px 0;
   line-height: 50px;
   font-weight: 500;
 }
+
+/* line 10, ../coding/BMR-calc/scss/layout/_informative.scss */
 .informative__heading .informative__blue {
   color: #3a86ff;
 }
 
+/* line 15, ../coding/BMR-calc/scss/layout/_informative.scss */
 .front__wrapper {
   display: flex;
   flex-direction: column;
   font-size: 1.1em;
 }
 
+/* line 21, ../coding/BMR-calc/scss/layout/_informative.scss */
 .informative {
   max-width: 1200px;
 }
+
+/* line 24, ../coding/BMR-calc/scss/layout/_informative.scss */
 .informative .informative__subheader {
   display: none;
   text-align: start;
@@ -280,39 +347,49 @@ html {
 }
 
 @media (min-width: 600px) {
+  /* line 33, ../coding/BMR-calc/scss/layout/_informative.scss */
   .informative__heading {
     font-size: 2em;
   }
 }
+
 @media (min-width: 1200px) {
+  /* line 39, ../coding/BMR-calc/scss/layout/_informative.scss */
   .front__wrapper {
     flex-direction: row;
     justify-content: center;
   }
-
+  /* line 44, ../coding/BMR-calc/scss/layout/_informative.scss */
   .informative__heading {
     font-size: 2.2em;
     line-height: 50px;
   }
-
+  /* line 48, ../coding/BMR-calc/scss/layout/_informative.scss */
   .informative {
     width: 40vw;
   }
+  /* line 51, ../coding/BMR-calc/scss/layout/_informative.scss */
   .informative .informative__subheader {
     margin: 60px 20px 0 20px;
     display: block;
   }
 }
+
+/* line 3, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 70vw;
 }
+
+/* line 9, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .param__label {
   font-size: 1.1em;
   margin-bottom: 3px;
 }
+
+/* line 14, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .param__value {
   height: 40px;
   font-size: 0.9em;
@@ -320,11 +397,15 @@ html {
   padding: 0 7px;
   border: 1px solid #aaaaaa;
 }
+
+/* line 22, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap #gender__value,
 .params .param__form .param__wrap #activity__level {
   cursor: pointer;
   background-color: white;
 }
+
+/* line 28, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .calculate__btn {
   margin: 40px auto;
   border-radius: 12px;
@@ -336,22 +417,29 @@ html {
   cursor: pointer;
   transition: 0.3s;
 }
+
+/* line 39, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .calculate__btn:focus {
   outline: none;
 }
 
 @media (min-width: 1200px) {
+  /* line 50, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap {
     width: 30vw;
     margin: 50px 100px;
   }
+  /* line 54, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap .calculate__btn {
     margin: 30px auto;
   }
+  /* line 57, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap .param__value {
     font-size: 1em;
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/layout/_results.scss */
 .results__mainheading {
   text-align: center;
   display: none;
@@ -359,17 +447,22 @@ html {
   margin: 20px 0;
 }
 
+/* line 8, ../coding/BMR-calc/scss/layout/_results.scss */
 .results {
   display: none;
   max-width: 1300px;
   margin: 0 auto;
 }
+
+/* line 13, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
+
+/* line 19, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section {
   margin: 40px;
   background-color: #f5f5f5;
@@ -378,14 +471,20 @@ html {
   max-width: 600px;
   padding: 10px;
 }
+
+/* line 28, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .results__header {
   margin: 40px 0 30px 0;
   font-size: 1.3em;
 }
+
+/* line 32, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .results__header .results__heading {
   line-height: 35px;
   color: #3a86ff;
 }
+
+/* line 40, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perday,
 .results .flex__wraper .results__section .calories__display .calories__perweek {
   display: flex;
@@ -394,67 +493,92 @@ html {
   margin: 60px 0;
   font-size: 1.6em;
 }
+
+/* line 50, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perweek .calories-number__perweek {
   margin-right: 15px;
 }
+
+/* line 55, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perday .calories-number__perday {
   margin-right: 15px;
 }
+
+/* line 62, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info {
   font-size: 1.2em;
   margin: 0 40px;
 }
+
+/* line 66, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .stats__text {
   margin: 30px 0;
   text-align: start;
 }
+
+/* line 70, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .stats__text .stats__calories {
   font-weight: 600;
 }
+
+/* line 75, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .calrate {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 15px auto;
 }
+
+/* line 83, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .base__text {
   margin-right: 30px;
 }
 
+/* line 90, ../coding/BMR-calc/scss/layout/_results.scss */
 .active__bold {
   font-weight: 600;
 }
 
+/* line 94, ../coding/BMR-calc/scss/layout/_results.scss */
 .results.show-results,
 .results__mainheading.show-results {
   display: block;
 }
 
 @media (min-width: 550px) {
+  /* line 105, ../coding/BMR-calc/scss/layout/_results.scss */
   .results .flex__wraper .results__section .calories__display .calories__perday,
-.results .flex__wraper .results__section .calories__display .calories__perweek {
+  .results .flex__wraper .results__section .calories__display .calories__perweek {
     margin: 40px 80px;
   }
 }
+
 @media (min-width: 1000px) {
+  /* line 117, ../coding/BMR-calc/scss/layout/_results.scss */
   .results .flex__wraper {
     flex-direction: row;
     justify-content: space-around;
   }
-
+  /* line 123, ../coding/BMR-calc/scss/layout/_results.scss */
   .stats__info {
     width: 50vw;
   }
 }
+
+/* line 3, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__header .macro__heading {
   font-size: 2.2em;
   margin: 40px auto;
   text-align: center;
 }
+
+/* line 9, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__header .macro__goal {
   text-align: center;
   margin-bottom: 30px;
 }
+
+/* line 15, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__links {
   display: flex;
   flex-direction: column;
@@ -462,6 +586,8 @@ html {
   align-items: center;
   text-align: center;
 }
+
+/* line 22, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__links .macro__link {
   margin: 10px;
   width: 140px;
@@ -471,11 +597,15 @@ html {
   color: #fff;
   border-radius: 12px;
 }
+
+/* line 33, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__text {
   margin: 40px 20px;
   text-align: center;
   font-size: 1.2em;
 }
+
+/* line 39, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro .macro__percentage {
   position: relative;
   transform: translateX(-50%);
@@ -488,49 +618,68 @@ html {
   text-align: center;
 }
 
+/* line 51, ../coding/BMR-calc/scss/layout/_macros.scss */
 .macro__boxshadow {
   box-shadow: 0px 0px 4px 1px #3a86ff;
 }
 
 @media (min-width: 400px) {
+  /* line 59, ../coding/BMR-calc/scss/layout/_macros.scss */
   .macro .macro__links {
     flex-direction: row;
   }
 }
+
 @media (min-width: 600px) {
+  /* line 71, ../coding/BMR-calc/scss/layout/_macros.scss */
   .macro .macro__links .macro__link {
     margin: 0 3%;
   }
 }
+
+/* line 3, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-bmi__flex {
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
 }
 
+/* line 9, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
+/* line 14, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight {
   margin: 40px;
 }
+
+/* line 17, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight .ideal__header {
   margin: 30px 0;
   font-size: 1.3em;
 }
+
+/* line 21, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight .ideal__header .ideal__heading {
   line-height: 35px;
 }
+
+/* line 26, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight .ideal__text {
   font-size: 1.2em;
   margin: 40px 0;
   text-align: start;
 }
+
+/* line 31, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight .ideal__text .ideal__bold {
   font-weight: 600;
 }
+
+/* line 36, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
 .ideal-weight__wraper .ideal__weight .calrate {
   display: flex;
   justify-content: space-evenly;
@@ -540,35 +689,46 @@ html {
 }
 
 @media (min-width: 1000px) {
+  /* line 47, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
   .ideal-bmi__flex {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin-top: 40px;
   }
-
+  /* line 55, ../coding/BMR-calc/scss/layout/_ideal-weight.scss */
   .ideal__weight .ideal__text {
     width: 40vw;
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/layout/_bmi.scss */
 .bmi__wraper {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 60px;
 }
+
+/* line 8, ../coding/BMR-calc/scss/layout/_bmi.scss */
 .bmi__wraper .bmi .bmi__header {
   margin: 40px auto;
   font-size: 1.2em;
 }
+
+/* line 14, ../coding/BMR-calc/scss/layout/_bmi.scss */
 .bmi__wraper .bmi__text {
   margin: 40px 0;
   font-size: 1.2em;
 }
+
+/* line 18, ../coding/BMR-calc/scss/layout/_bmi.scss */
 .bmi__wraper .bmi__text .bmi__classified,
 .bmi__wraper .bmi__text .bmi__span {
   font-weight: 600;
 }
+
+/* line 24, ../coding/BMR-calc/scss/layout/_bmi.scss */
 .bmi__wraper .calrate {
   display: flex;
   justify-content: space-evenly;
@@ -577,27 +737,36 @@ html {
   font-size: 1.2em;
 }
 
+/* line 1, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer {
   min-height: 108px;
   background-color: #3a86ff;
   color: #fff;
   width: 100%;
 }
+
+/* line 6, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer .footer__column {
   display: flex;
   flex-direction: column;
   align-content: space-between;
 }
+
+/* line 11, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer .footer__column .copyright__flex {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 15px 0 20px 0;
 }
+
+/* line 17, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer .footer__column .copyright__flex .footer__copyright {
   height: 15px;
   margin-right: 5px;
 }
+
+/* line 23, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer .footer__column .contact__flex {
   position: relative;
   display: flex;
@@ -607,6 +776,8 @@ html {
   transform: translateX(-50%);
   margin-top: 15px;
 }
+
+/* line 33, ../coding/BMR-calc/scss/layout/_footer.scss */
 .footer .footer__column .contact__flex .footlink {
   padding: 10px 30px;
   text-decoration: none;
@@ -617,57 +788,78 @@ html {
 }
 
 @media (max-width: 600px) {
+  /* line 47, ../coding/BMR-calc/scss/layout/_footer.scss */
   .footer .contact__flex {
     flex-direction: column;
     align-items: center;
   }
 }
+
+/* line 1, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height {
   min-height: 100vh;
 }
+
+/* line 5, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* line 12, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main .terms__header .terms__heading {
   margin: 40px 0;
   font-size: 2.1em;
 }
+
+/* line 17, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main .terms__header .terms__subheader {
   font-size: 1.4em;
   font-weight: 400;
 }
+
+/* line 23, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main .terms {
   margin: 60px 20px;
   list-style: none;
   text-align: left;
 }
+
+/* line 28, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main .terms .term__big {
   font-size: 1.4em;
   font-weight: 600;
   margin: 30px 0;
 }
+
+/* line 34, ../coding/BMR-calc/scss/layout/_terms.scss */
 .min-height .terms__main .terms .term {
   margin: 15px;
   font-size: 1.1em;
 }
 
+/* line 1, ../coding/BMR-calc/scss/layout/_qa.scss */
 .qa {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* line 5, ../coding/BMR-calc/scss/layout/_qa.scss */
 .qa .qa__header .qa__heading {
   text-align: center;
   font-weight: 500;
   font-size: 2.2em;
   margin: 40px 0;
 }
+
+/* line 12, ../coding/BMR-calc/scss/layout/_qa.scss */
 .qa .qa__header .qa__text {
   font-size: 1.2em;
   margin: 30px;
 }
 
+/* line 1, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-header {
   display: flex;
   flex-direction: column;
@@ -675,30 +867,41 @@ html {
   margin: 4em 15px;
   text-align: center;
 }
+
+/* line 8, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-header .contact-h1 {
   font-size: 2em;
   margin: 20px auto;
   font-weight: 500;
 }
+
+/* line 13, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-header .contact-h1 .contact-blue {
   color: #3a86ff;
 }
+
+/* line 18, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-header .contact-h2 {
   margin: 1em auto;
   font-size: 1.4em;
   font-weight: 400;
 }
 
+/* line 25, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 50vh;
+  min-height: 53vh;
 }
+
+/* line 32, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-form {
   margin-bottom: 50px;
 }
+
+/* line 34, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-form div input {
   margin: 1em auto;
   height: 2.5em;
@@ -706,20 +909,28 @@ html {
   width: 70vw;
   padding: 0.7em;
 }
+
+/* line 42, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-form textarea {
   resize: none;
   width: 70vw;
   padding: 0.7em;
   font-size: 1.1em;
 }
+
+/* line 49, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-form .form-header {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
+
+/* line 55, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-details {
   margin: 0 0 2em 0;
   font-size: 1.2em;
 }
+
+/* line 59, ../coding/BMR-calc/scss/layout/_contact.scss */
 .contact-main .contact-details .contact-me {
   margin: 10px 0;
   font-size: 1.2em;
@@ -727,26 +938,34 @@ html {
 }
 
 @media (min-width: 800px) {
+  /* line 68, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main {
     flex-direction: row;
     justify-content: space-evenly;
   }
+  /* line 72, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main .contact-form {
     margin-right: 80px;
   }
+  /* line 75, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main .contact-form div input {
     width: 40vw;
     margin-bottom: 30px;
   }
+  /* line 80, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main .contact-form textarea {
     width: 40vw;
   }
+  /* line 86, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main .contact-header .contact-h1 {
     font-size: 2.2em;
   }
+  /* line 91, ../coding/BMR-calc/scss/layout/_contact.scss */
   .contact-main .contact-details {
     font-size: 1.5em;
     margin: auto 4em;
     padding-bottom: 4em;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
