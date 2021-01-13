@@ -19,6 +19,30 @@
         border: 1px solid rgb(170, 170, 170);
       }
 
+      .red {
+        border-bottom: 2px solid red;
+      }
+
+      .age__input-error {
+        display: none;
+        color: red;
+      }
+      .weight__input-error {
+        display: none;
+        color: red;
+      }
+      .height__input-error {
+        display: none;
+        color: red;
+      }
+
+      .active-error {
+        font-size: 0.8rem;
+
+        display: block;
+        margin-bottom: 7px;
+      }
+
       #gender__value,
       #activity__level {
         cursor: pointer;

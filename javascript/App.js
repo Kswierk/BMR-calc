@@ -1,2 +1,8 @@
 import Navbar from './Navbar.js';
-window.addEventListener('DOMContentLoaded', Navbar);
+import ValidateForm from './ValidateForm.js';
+const validateform = new ValidateForm();
+const addListeners = () => {
+    Navbar();
+    validateform.initialize();
+};
+window.addEventListener('DOMContentLoaded', addListeners);

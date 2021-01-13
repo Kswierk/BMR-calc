@@ -399,13 +399,43 @@ input::-webkit-inner-spin-button {
 }
 
 /* line 22, ../coding/BMR-calc/scss/layout/_params.scss */
+.params .param__form .param__wrap .red {
+  border-bottom: 2px solid red;
+}
+
+/* line 26, ../coding/BMR-calc/scss/layout/_params.scss */
+.params .param__form .param__wrap .age__input-error {
+  display: none;
+  color: red;
+}
+
+/* line 30, ../coding/BMR-calc/scss/layout/_params.scss */
+.params .param__form .param__wrap .weight__input-error {
+  display: none;
+  color: red;
+}
+
+/* line 34, ../coding/BMR-calc/scss/layout/_params.scss */
+.params .param__form .param__wrap .height__input-error {
+  display: none;
+  color: red;
+}
+
+/* line 39, ../coding/BMR-calc/scss/layout/_params.scss */
+.params .param__form .param__wrap .active-error {
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 7px;
+}
+
+/* line 46, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap #gender__value,
 .params .param__form .param__wrap #activity__level {
   cursor: pointer;
   background-color: white;
 }
 
-/* line 28, ../coding/BMR-calc/scss/layout/_params.scss */
+/* line 52, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .calculate__btn {
   margin: 40px auto;
   border-radius: 12px;
@@ -418,22 +448,22 @@ input::-webkit-inner-spin-button {
   transition: 0.3s;
 }
 
-/* line 39, ../coding/BMR-calc/scss/layout/_params.scss */
+/* line 63, ../coding/BMR-calc/scss/layout/_params.scss */
 .params .param__form .param__wrap .calculate__btn:focus {
   outline: none;
 }
 
 @media (min-width: 1200px) {
-  /* line 50, ../coding/BMR-calc/scss/layout/_params.scss */
+  /* line 74, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap {
     width: 30vw;
     margin: 50px 100px;
   }
-  /* line 54, ../coding/BMR-calc/scss/layout/_params.scss */
+  /* line 78, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap .calculate__btn {
     margin: 30px auto;
   }
-  /* line 57, ../coding/BMR-calc/scss/layout/_params.scss */
+  /* line 81, ../coding/BMR-calc/scss/layout/_params.scss */
   .params .param__form .param__wrap .param__value {
     font-size: 1em;
   }
