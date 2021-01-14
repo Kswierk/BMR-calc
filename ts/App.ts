@@ -1,9 +1,13 @@
 import Navbar from './Navbar.js';
-import ValidateForm from './ValidateForm.js';
+import HandleForm from './HandleForm.js';
+import * as UiSelectors from './UiSelectors.js';
 
-const validateform = new ValidateForm();
-const addListeners = () => {
+const initApp = () => {
+  if (!UiSelectors.button) {
+    throw new Error('dont have button');
+  }
   Navbar();
-  validateform.initialize();
+
+  UiSelectors.button.addEventListener('click', HandleForm);
 };
-window.addEventListener('DOMContentLoaded', addListeners);
+window.addEventListener('DOMContentLoaded', initApp);

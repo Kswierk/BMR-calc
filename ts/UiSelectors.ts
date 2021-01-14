@@ -12,26 +12,30 @@ export const resultsSection = document.querySelector('.results')!;
 
 //ValidateForm Selectors
 
+const form = <HTMLFormElement>document.querySelector('.param__form');
+if (!form) {
+  throw new Error('there is no such form');
+}
+
 export const genderInput = <HTMLInputElement>(
-  document.querySelector('[data-gender]')
+  form.querySelector('[data-gender]')
 );
-export const ageInput = <HTMLInputElement>document.querySelector('[data-age]');
+
+export const ageInput = <HTMLInputElement>form.querySelector('[data-age]');
 export const weightInput = <HTMLInputElement>(
-  document.querySelector('[data-weight]')
+  form.querySelector('[data-weight]')
 );
 export const heightInput = <HTMLInputElement>(
-  document.querySelector('[data-height]')
+  form.querySelector('[data-height]')
 );
 export const activityLevelInput = <HTMLInputElement>(
-  document.querySelector('[data-activity ]')
+  form.querySelector('[data-activity ]')
 );
-export const ageError = <HTMLElement>(
-  document.querySelector('.age__input-error')
-);
+export const ageError = <HTMLElement>form.querySelector('.age__input-error');
 export const heightError = <HTMLElement>(
-  document.querySelector('.height__input-error')
+  form.querySelector('.height__input-error')
 );
 export const weightError = <HTMLElement>(
-  document.querySelector('.weight__input-error')
+  form.querySelector('.weight__input-error')
 );
 export const dataStart = <HTMLElement>document.querySelector('[data-start]');

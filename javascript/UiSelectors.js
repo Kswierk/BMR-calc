@@ -6,12 +6,16 @@ export const navLinks = document.querySelectorAll('.navbar__item');
 export const button = document.querySelector('[data-calc]');
 export const resultsSection = document.querySelector('.results');
 //ValidateForm Selectors
-export const genderInput = (document.querySelector('[data-gender]'));
-export const ageInput = document.querySelector('[data-age]');
-export const weightInput = (document.querySelector('[data-weight]'));
-export const heightInput = (document.querySelector('[data-height]'));
-export const activityLevelInput = (document.querySelector('[data-activity ]'));
-export const ageError = (document.querySelector('.age__input-error'));
-export const heightError = (document.querySelector('.height__input-error'));
-export const weightError = (document.querySelector('.weight__input-error'));
+const form = document.querySelector('.param__form');
+if (!form) {
+    throw new Error('there is no such form');
+}
+export const genderInput = (form.querySelector('[data-gender]'));
+export const ageInput = form.querySelector('[data-age]');
+export const weightInput = (form.querySelector('[data-weight]'));
+export const heightInput = (form.querySelector('[data-height]'));
+export const activityLevelInput = (form.querySelector('[data-activity ]'));
+export const ageError = form.querySelector('.age__input-error');
+export const heightError = (form.querySelector('.height__input-error'));
+export const weightError = (form.querySelector('.weight__input-error'));
 export const dataStart = document.querySelector('[data-start]');
