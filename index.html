@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/favicon1.png" type="image/png">
 </head>
-
+<!-- tailwind -->
 <body>
     <div class="first__page">
         <nav class="navbar">
@@ -39,24 +39,24 @@
 
                             <label for="gender" class="gender__label param__label">Płeć:
                             </label>
-                            <select name="gender__value" id="gender__value" class="param__value" data-gender>
+                            <select name="gender" id="gender__value" class="gender__value param__value" data-gender>
                                 <option value="male">Mężczyzna</option>
                                 <option value="female">Kobieta</option>
                             </select>
 
                             <label for="age" class="param__label">Wiek:
                             </label>
-                            <input type="number" class="age__input param__value" data-age required>
+                            <input name="age" type="number" class="age__input param__value" data-age required>
                             <p class="age__input-error">Podaj wartość w przedziale 10-99 </p>
                             <label for="weight" class="param__label">Waga:
                             </label>
-                            <input type="number" class="weight__input param__value" placeholder="kg" data-weight
+                            <input name="weight" type="number" class="weight__input param__value" placeholder="kg" data-weight
                                 required>
                                 <p class="weight__input-error">Podaj wartość w przedziale 30-200 </p>
 
                             <label for="height" class="param__label">Wzrost:
                             </label>
-                            <input type="number" class="height__input param__value" placeholder="cm" data-height
+                            <input name="height" type="number" class="height__input param__value" placeholder="cm" data-height
                                 required>
                                 
                                 <p class="height__input-error">Podaj wartość w przedziale 100-250 </p>
@@ -65,7 +65,7 @@
                             <label for="activity" class="param__label" class="activity__label">Poziom aktywności
                                 fizycznej:
                             </label>
-                            <select data-activity name="activity__level" id="activity__level" class="param__value">
+                            <select data-activity name="activity__level" id="activity__level" class="activity_value param__value">
                                 <option value="1">Znikomy - brak aktywności fizycznej</option>
                                 <option value="1.2">Niski - lekki trening 1-2 razy w tygodniu
                                 </option>
@@ -75,7 +75,7 @@
                                 <option value="1.725">Wysoki - praca fizyczna, 5-7 razy w tygodniu</option>
                                 <option value="1.9"> Bardzo wysoki - praca fizyczna, codzienne treningi</option>
                             </select>
-                            <button type="button" class="calculate__btn" data-calc>Oblicz</button>
+                            <button name="button" type="button" class="calculate__btn" data-calc>Oblicz</button>
                         </div>
                     </form>
                 </section>

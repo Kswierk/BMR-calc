@@ -7,6 +7,7 @@ const initApp = () => {
     throw new Error('dont have button');
   }
   Navbar();
+  // const form = initFormLogic();
 
   UiSelectors.button.addEventListener('click', HandleForm);
 };
