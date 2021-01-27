@@ -1,9 +1,18 @@
-import * as UiSelectors from './UiSelectors.js';
+// import * as UiSelectors from './UiSelectors.js';
+import { formElements, resultsSection, burger, } from './UiSelectors.js';
 import validateForm from './ValidateForm.js';
 import scrollToSection from './ScrollToSection.js';
-const HandleForm = (form = UiSelectors.form) => {
+const HandleForm = () => {
     const formValidationParams = validateForm();
-    const { resultsSection, age, ageError, weight, weightError, height, heightError, gender, activity, dataStart, burger, } = UiSelectors;
+    const height = formElements.getElement('height');
+    const heightError = formElements.getElement('heightError');
+    const gender = formElements.getElement('gender');
+    const activity = formElements.getElement('activity');
+    const age = formElements.getElement('age');
+    const ageError = formElements.getElement('ageError');
+    const weight = formElements.getElement('weight');
+    const weightError = formElements.getElement('weightError');
+    const results = resultsSection.getElement('results');
     const formValues = {
         genderVal: gender.value,
         ageVal: age.value,
@@ -11,41 +20,31 @@ const HandleForm = (form = UiSelectors.form) => {
         heightVal: height.value,
         activityVal: activity.value,
     };
-    console.log(formValues);
+    console.log(formValidationParams);
+    const handleFormValue = (validationParam, param, paramError) => {
+        if (!validationParam) {
+            param.classList.add('red');
+            paramError.classList.add('active-error');
+        }
+        else {
+            param.classList.remove('red');
+            paramError.classList.remove('active-error');
+        }
+    };
+    handleFormValue(formValidationParams.age, age, ageError);
+    handleFormValue(formValidationParams.height, height, heightError);
+    handleFormValue(formValidationParams.weight, weight, weightError);
     const showResults = () => {
-        return resultsSection.classList.add('show-results');
+        return results.classList.add('show-results');
     };
     const hideResults = () => {
-        return resultsSection.classList.remove('show-results');
+        return results.classList.remove('show-results');
     };
-    if (!formValidationParams.age) {
-        age.classList.add('red');
-        ageError.classList.add('active-error');
-    }
-    else {
-        age.classList.remove('red');
-        ageError.classList.remove('active-error');
-    }
-    if (!formValidationParams.weight) {
-        weight.classList.add('red');
-        weightError.classList.add('active-error');
-    }
-    else {
-        weight.classList.remove('red');
-        weightError.classList.remove('active-error');
-    }
-    if (!formValidationParams.height) {
-        height.classList.add('red');
-        heightError.classList.add('active-error');
-    }
-    else {
-        height.classList.remove('red');
-        heightError.classList.remove('active-error');
-    }
     if (Object.values(formValidationParams).every((val) => val === true)) {
-        scrollToSection(dataStart, showResults);
+        scrollToSection(results, showResults);
     }
     else
         scrollToSection(burger, hideResults);
+    return formValues;
 };
 export default HandleForm;

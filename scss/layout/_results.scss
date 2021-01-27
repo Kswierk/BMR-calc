@@ -1,126 +1,122 @@
 .results__mainheading {
-    text-align: center;
-    display: none;
-    font-size: 2.2em;
-    margin: 20px 0;
+  text-align: center;
+  display: none;
+  font-size: 2.2em;
+  margin: 20px 0;
 }
 
 .results {
-    display: none;
-    max-width: 1300px;
-    margin: 0 auto;
+  // display: none;
+  max-width: 1300px;
+  margin: 0 auto;
 
-    .flex__wraper {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
+  .flex__wraper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 
-        .results__section {
-            margin: 40px;
-            background-color: $contrast;
-            color: $main;
-            border-radius: 30px;
-            max-width: 600px;
-            padding: 10px;
+    .results__section {
+      margin: 40px;
+      background-color: $contrast;
+      color: $main;
+      border-radius: 30px;
+      max-width: 600px;
+      padding: 10px;
 
+      .results__header {
+        margin: 40px 0 30px 0;
+        font-size: 1.3em;
 
-            .results__header {
-                margin: 40px 0 30px 0;
-                font-size: 1.3em;
+        .results__heading {
+          line-height: 35px;
+          color: $darkcontrast;
+        }
+      }
 
-                .results__heading {
-                    line-height: 35px;
-                    color: $darkcontrast;
-                }
-            }
-
-            .calories__display {
-
-                .calories__perday,
-                .calories__perweek {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 60px 0;
-                    font-size: 1.6em;
-                }
-
-                .calories__perweek{
-                    .calories-number__perweek{
-                        margin-right: 15px;
-                    }
-                }
-                .calories__perday{
-                    .calories-number__perday{
-                        margin-right: 15px;
-                    }
-                }
-            }
+      .calories__display {
+        .calories__perday,
+        .calories__perweek {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 60px 0;
+          font-size: 1.6em;
         }
 
-        .stats__info {
-            font-size: 1.2em;
-            margin: 0 40px;
-
-            .stats__text {
-                margin: 30px 0;
-                text-align: start;
-
-                .stats__calories {
-                    font-weight: $font-bold;
-                }
-            }
-
-            .calrate {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                margin: 15px auto;
-
-            }
-
-            .base__text {
-                margin-right: 30px;
-            }
+        .calories__perweek {
+          .calories-number__perweek {
+            margin-right: 15px;
+          }
         }
+        .calories__perday {
+          .calories-number__perday {
+            margin-right: 15px;
+          }
+        }
+      }
     }
+
+    .stats__info {
+      font-size: 1.2em;
+      margin: 0 40px;
+
+      .stats__text {
+        margin: 30px 0;
+        text-align: start;
+
+        .stats__calories {
+          font-weight: $font-bold;
+        }
+      }
+
+      .calrate {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 15px auto;
+      }
+
+      .base__text {
+        margin-right: 30px;
+      }
+    }
+  }
 }
 
 .active__bold {
-    font-weight: $font-bold;
+  font-weight: $font-bold;
 }
 
 .results.show-results,
 .results__mainheading.show-results {
-    display: block;
+  display: block;
 }
 
-@media(min-width:550px) {
-    .results {
-        .flex__wraper {
-            .results__section {
-                .calories__display {
-
-                    .calories__perday,
-                    .calories__perweek {
-                        margin: 40px 80px;
-                    }
-                }
-            }
+@media (min-width: 550px) {
+  .results {
+    .flex__wraper {
+      .results__section {
+        .calories__display {
+          .calories__perday,
+          .calories__perweek {
+            margin: 40px 80px;
+          }
         }
+      }
     }
+  }
 }
 
 @media (min-width: 1000px) {
-    .results {
-        .flex__wraper {
-            flex-direction: row;
-            justify-content: space-around;
-        }
+  .results {
+    .flex__wraper {
+      flex-direction: row;
+      justify-content: space-around;
     }
+  }
 
-    .stats__info {
-        width: 50vw;
-    }
+  .stats__info {
+    width: 50vw;
+  }
 }

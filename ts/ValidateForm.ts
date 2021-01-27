@@ -1,4 +1,4 @@
-import * as UiSelectors from './UiSelectors.js';
+import { formElements } from './UiSelectors.js';
 
 interface IvalidationSchema {
   age: boolean;
@@ -6,36 +6,48 @@ interface IvalidationSchema {
   height: boolean;
 }
 
-const validateForm = (
-  form = UiSelectors.formStructure
-): IvalidationSchema => {
+const validateForm = (form = formElements): IvalidationSchema => {
   const validationSchema: IvalidationSchema = {
     age: false,
     weight: false,
     height: false,
   };
 
-  const { height, age, weight } = UiSelectors;
+  const height = form.getElement('height');
+  const age = form.getElement('age');
+  const weight = form.getElement('weight');
 
   const correctAgeInputValues = age.value > 9 && age.value < 100;
-
-  correctAgeInputValues
-    ? (validationSchema.age = true)
-    : (validationSchema.age = false);
 
   const correctWeightInputValues =
     weight.value > 29 && weight.value < 201;
 
-  correctWeightInputValues
-    ? (validationSchema.weight = true)
-    : (validationSchema.weight = false);
-
   const correctHeightInputValues =
     height.value > 99 && height.value < 251;
 
-  correctHeightInputValues
-    ? (validationSchema.height = true)
-    : (validationSchema.height = false);
+  validationSchema.age = correctAgeInputValues;
+
+  validationSchema.weight = correctWeightInputValues;
+
+  validationSchema.height = correctHeightInputValues;
+
+  // correctAgeInputValues
+  //   ? (validationSchema.age = true)
+  //   : (validationSchema.age = false);
+
+  // const correctWeightInputValues =
+  //   weight.value > 29 && weight.value < 201;
+
+  // correctWeightInputValues
+  //   ? (validationSchema.weight = true)
+  //   : (validationSchema.weight = false);
+
+  // const correctHeightInputValues =
+  //   height.value > 99 && height.value < 251;
+
+  // correctHeightInputValues
+  //   ? (validationSchema.height = true)
+  //   : (validationSchema.height = false);
 
   // const formAsObject = { ...form };
   // Object.entries(formAsObject).forEach(([key, formElement]) => {

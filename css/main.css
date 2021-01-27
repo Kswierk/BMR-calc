@@ -479,7 +479,6 @@ input::-webkit-inner-spin-button {
 
 /* line 8, ../coding/BMR-calc/scss/layout/_results.scss */
 .results {
-  display: none;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -502,19 +501,19 @@ input::-webkit-inner-spin-button {
   padding: 10px;
 }
 
-/* line 28, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 27, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .results__header {
   margin: 40px 0 30px 0;
   font-size: 1.3em;
 }
 
-/* line 32, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 31, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .results__header .results__heading {
   line-height: 35px;
   color: #3a86ff;
 }
 
-/* line 40, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 38, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perday,
 .results .flex__wraper .results__section .calories__display .calories__perweek {
   display: flex;
@@ -524,34 +523,34 @@ input::-webkit-inner-spin-button {
   font-size: 1.6em;
 }
 
-/* line 50, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 48, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perweek .calories-number__perweek {
   margin-right: 15px;
 }
 
-/* line 55, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 53, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .results__section .calories__display .calories__perday .calories-number__perday {
   margin-right: 15px;
 }
 
-/* line 62, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 60, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info {
   font-size: 1.2em;
   margin: 0 40px;
 }
 
-/* line 66, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 64, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .stats__text {
   margin: 30px 0;
   text-align: start;
 }
 
-/* line 70, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 68, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .stats__text .stats__calories {
   font-weight: 600;
 }
 
-/* line 75, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 73, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .calrate {
   display: flex;
   justify-content: space-evenly;
@@ -559,24 +558,24 @@ input::-webkit-inner-spin-button {
   margin: 15px auto;
 }
 
-/* line 83, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 80, ../coding/BMR-calc/scss/layout/_results.scss */
 .results .flex__wraper .stats__info .base__text {
   margin-right: 30px;
 }
 
-/* line 90, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 87, ../coding/BMR-calc/scss/layout/_results.scss */
 .active__bold {
   font-weight: 600;
 }
 
-/* line 94, ../coding/BMR-calc/scss/layout/_results.scss */
+/* line 91, ../coding/BMR-calc/scss/layout/_results.scss */
 .results.show-results,
 .results__mainheading.show-results {
   display: block;
 }
 
 @media (min-width: 550px) {
-  /* line 105, ../coding/BMR-calc/scss/layout/_results.scss */
+  /* line 101, ../coding/BMR-calc/scss/layout/_results.scss */
   .results .flex__wraper .results__section .calories__display .calories__perday,
   .results .flex__wraper .results__section .calories__display .calories__perweek {
     margin: 40px 80px;
@@ -584,12 +583,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1000px) {
-  /* line 117, ../coding/BMR-calc/scss/layout/_results.scss */
+  /* line 113, ../coding/BMR-calc/scss/layout/_results.scss */
   .results .flex__wraper {
     flex-direction: row;
     justify-content: space-around;
   }
-  /* line 123, ../coding/BMR-calc/scss/layout/_results.scss */
+  /* line 119, ../coding/BMR-calc/scss/layout/_results.scss */
   .stats__info {
     width: 50vw;
   }
