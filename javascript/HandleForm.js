@@ -1,5 +1,6 @@
 // import * as UiSelectors from './UiSelectors.js';
 import { formElements, resultsSection, burger, } from './UiSelectors.js';
+import { CalculateCaloriesIntake } from './CalculateCaloriesIntake.js';
 import validateForm from './ValidateForm.js';
 import scrollToSection from './ScrollToSection.js';
 const HandleForm = () => {
@@ -15,12 +16,11 @@ const HandleForm = () => {
     const results = resultsSection.getElement('results');
     const formValues = {
         genderVal: gender.value,
-        ageVal: age.value,
-        weightVal: weight.value,
-        heightVal: height.value,
-        activityVal: activity.value,
+        ageVal: Number(age.value),
+        weightVal: Number(weight.value),
+        heightVal: Number(height.value),
+        activityVal: Number(activity.value),
     };
-    console.log(formValidationParams);
     const handleFormValue = (validationParam, param, paramError) => {
         if (!validationParam) {
             param.classList.add('red');
@@ -41,6 +41,7 @@ const HandleForm = () => {
         return results.classList.remove('show-results');
     };
     if (Object.values(formValidationParams).every((val) => val === true)) {
+        CalculateCaloriesIntake(formValues);
         scrollToSection(results, showResults);
     }
     else

@@ -1,10 +1,12 @@
 // import * as UiSelectors from './UiSelectors.js';
+
 import {
   formElements,
   resultsSection,
   burger,
 } from './UiSelectors.js';
 
+import { CalculateCaloriesIntake } from './CalculateCaloriesIntake.js';
 import validateForm from './ValidateForm.js';
 import scrollToSection from './ScrollToSection.js';
 
@@ -24,13 +26,11 @@ const HandleForm = () => {
 
   const formValues = {
     genderVal: gender.value,
-    ageVal: age.value,
-    weightVal: weight.value,
-    heightVal: height.value,
-    activityVal: activity.value,
+    ageVal: Number(age.value),
+    weightVal: Number(weight.value),
+    heightVal: Number(height.value),
+    activityVal: Number(activity.value),
   };
-
-  console.log(formValidationParams);
 
   const handleFormValue = (
     validationParam: boolean,
@@ -60,6 +60,8 @@ const HandleForm = () => {
   if (
     Object.values(formValidationParams).every((val) => val === true)
   ) {
+    CalculateCaloriesIntake(formValues);
+
     scrollToSection(results, showResults);
   } else scrollToSection(burger, hideResults);
 

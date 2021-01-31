@@ -9,12 +9,15 @@ class Macroswitch {
         this.moderateProtein = document.querySelector('[data-moderate-protein]');
         this.moderateFats = document.querySelector('[data-moderate-fats]');
         this.moderateCarbs = document.querySelector('[data-moderate-carbs]');
+
         this.ketoProtein = document.querySelector('[data-keto-protein]');
         this.ketoFats = document.querySelector('[data-keto-fats]');
         this.ketoCarbs = document.querySelector('[data-keto-carbs]');
+
         this.highProtein = document.querySelector('[data-highcarb-protein]');
         this.highFats = document.querySelector('[data-highcarb-fats]');
         this.highCarbs = document.querySelector('[data-highcarb-carbs]');
+        
         this.caloriesValue = document.querySelector('.calories-number__perday');
         this.macroText = document.querySelector('.macro__text');;
     }
