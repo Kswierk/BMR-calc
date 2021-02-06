@@ -14,11 +14,21 @@ export const CountMacros = (caloriesValues) => {
         ketoFat: calculateMacros(0.77, 9),
         ketoCarbs: calculateMacros(0.03, 4),
     };
-    const objectMap = (obj, fn) => Object.fromEntries(Object.entries(obj).map(([key, value]) => [key, fn(value, key)]));
+    const objectMap = (objectToMap, fn) => Object.fromEntries(Object.entries(objectToMap).map(([key, value]) => [
+        key,
+        fn(value, key),
+    ]));
     const cuttingMacros = objectMap(maintenanceMacros, (value) => Math.round(value * 0.85));
     const bulkingMacros = objectMap(maintenanceMacros, (value) => Math.round(value * 1.15));
-    console.log(maintenanceMacros);
-    console.log(cuttingMacros);
-    console.log(bulkingMacros);
-    //   console.log(maintenanceMacros);
+    const countedMacrosObject = {
+        maintenance: maintenanceMacros,
+        cutting: cuttingMacros,
+        bulking: bulkingMacros,
+    };
+    return countedMacrosObject;
+    // return {
+    //   maintenance: maintenanceMacros,
+    //   cutting: cuttingMacros,
+    //   bulking: bulkingMacros,
+    // };
 };

@@ -3,7 +3,7 @@ import {
   IIntake,
 } from './CalculateCaloriesIntake.js';
 
-interface IMacros {
+export interface IMacros {
   balancedProtein: number;
   balancedFat: number;
   balancedCarbs: number;
@@ -15,6 +15,12 @@ interface IMacros {
   ketoProtein: number;
   ketoFat: number;
   ketoCarbs: number;
+}
+
+export interface ICountedMacros {
+  maintenance: IMacros;
+  cutting: IMacros;
+  bulking: IMacros;
 }
 
 export const CountMacros = (caloriesValues: IIntake) => {
@@ -44,11 +50,14 @@ export const CountMacros = (caloriesValues: IIntake) => {
   };
 
   const objectMap = (
-    obj: IMacros,
+    objectToMap: IMacros,
     fn: (value: number, key: string) => number
   ) =>
     Object.fromEntries(
-      Object.entries(obj).map(([key, value]) => [key, fn(value, key)])
+      Object.entries(objectToMap).map(([key, value]) => [
+        key,
+        fn(value, key),
+      ])
     );
 
   const cuttingMacros = objectMap(maintenanceMacros, (value) =>
@@ -59,9 +68,17 @@ export const CountMacros = (caloriesValues: IIntake) => {
     Math.round(value * 1.15)
   );
 
-  console.log(maintenanceMacros);
-  console.log(cuttingMacros);
-  console.log(bulkingMacros);
+  const countedMacrosObject: ICountedMacros = {
+    maintenance: maintenanceMacros,
+    cutting: cuttingMacros,
+    bulking: bulkingMacros,
+  };
 
-  //   console.log(maintenanceMacros);
+  return countedMacrosObject;
+
+  // return {
+  //   maintenance: maintenanceMacros,
+  //   cutting: cuttingMacros,
+  //   bulking: bulkingMacros,
+  // };
 };

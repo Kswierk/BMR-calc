@@ -1,5 +1,3 @@
-import { CountMacros } from './CountMacros.js';
-import FillCaloriesFields from './FillCaloriesFields.js';
 export const CalculateCaloriesIntake = (formValues) => {
     const { genderVal, ageVal, weightVal, heightVal, activityVal, } = formValues;
     const maleBaseCalories = 66 + 13.7 * weightVal + 5 * heightVal - 6.76 * ageVal;
@@ -21,7 +19,8 @@ export const CalculateCaloriesIntake = (formValues) => {
         highActivity: countCalories(1.725),
         vHighActivity: countCalories(1.9),
     };
-    FillCaloriesFields(caloriesIntake);
-    CountMacros(caloriesIntake);
+    return caloriesIntake;
+    // FillCaloriesFields(caloriesIntake);
+    // CountMacros(caloriesIntake);
     // czy return caloriesIntake i przypisuje to do zmiennej w fillcaloriesfields;
 };

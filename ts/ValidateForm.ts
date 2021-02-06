@@ -1,6 +1,6 @@
 import { formElements } from './UiSelectors.js';
 
-interface IvalidationSchema {
+export interface IvalidationSchema {
   age: boolean;
   weight: boolean;
   height: boolean;

@@ -3,8 +3,33 @@ import { formElements, resultsSection, burger, } from './UiSelectors.js';
 import { CalculateCaloriesIntake } from './CalculateCaloriesIntake.js';
 import validateForm from './ValidateForm.js';
 import scrollToSection from './ScrollToSection.js';
+import FillCaloriesFields from './FillCaloriesFields.js';
+import { CountMacros } from './CountMacros.js';
+import FillMacrosFields from './FillMacrosFields.js';
+import switchMacros from './switchMacros.js';
+//
+const handleFormValue = (validationParam, param, paramError) => {
+    if (!validationParam) {
+        param.classList.add('red');
+        paramError.classList.add('active-error');
+    }
+    else {
+        param.classList.remove('red');
+        paramError.classList.remove('active-error');
+    }
+};
+const showResults = () => {
+    resultsSection.getElement('results').classList.add('show-results');
+};
+const hideResults = () => {
+    resultsSection
+        .getElement('results')
+        .classList.remove('show-results');
+};
+//
 const HandleForm = () => {
     const formValidationParams = validateForm();
+    // const {height, heightError, ....} / [height, heightError, ...] = formElements.getElements(elementToSelect)
     const height = formElements.getElement('height');
     const heightError = formElements.getElement('heightError');
     const gender = formElements.getElement('gender');
@@ -21,31 +46,19 @@ const HandleForm = () => {
         heightVal: Number(height.value),
         activityVal: Number(activity.value),
     };
-    const handleFormValue = (validationParam, param, paramError) => {
-        if (!validationParam) {
-            param.classList.add('red');
-            paramError.classList.add('active-error');
-        }
-        else {
-            param.classList.remove('red');
-            paramError.classList.remove('active-error');
-        }
-    };
     handleFormValue(formValidationParams.age, age, ageError);
     handleFormValue(formValidationParams.height, height, heightError);
     handleFormValue(formValidationParams.weight, weight, weightError);
-    const showResults = () => {
-        return results.classList.add('show-results');
-    };
-    const hideResults = () => {
-        return results.classList.remove('show-results');
-    };
     if (Object.values(formValidationParams).every((val) => val === true)) {
-        CalculateCaloriesIntake(formValues);
+        const calories = CalculateCaloriesIntake(formValues);
+        FillCaloriesFields(calories);
+        const macros = CountMacros(calories);
+        FillMacrosFields(macros.maintenance);
+        switchMacros(macros);
         scrollToSection(results, showResults);
     }
     else
         scrollToSection(burger, hideResults);
-    return formValues;
+    // return formValues;
 };
 export default HandleForm;

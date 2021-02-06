@@ -54,9 +54,11 @@ export const CalculateCaloriesIntake = (formValues: IFormValues) => {
     vHighActivity: countCalories(1.9),
   };
 
-  FillCaloriesFields(caloriesIntake);
+  return caloriesIntake;
 
-  CountMacros(caloriesIntake);
+  // FillCaloriesFields(caloriesIntake);
+
+  // CountMacros(caloriesIntake);
 
   // czy return caloriesIntake i przypisuje to do zmiennej w fillcaloriesfields;
 };
