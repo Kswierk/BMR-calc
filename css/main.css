@@ -479,6 +479,7 @@ input::-webkit-inner-spin-button {
 
 /* line 8, ../coding/BMR-calc/scss/layout/_results.scss */
 .results {
+  display: none;
   max-width: 1300px;
   margin: 0 auto;
 }
