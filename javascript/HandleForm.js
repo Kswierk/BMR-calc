@@ -1,7 +1,7 @@
 // import * as UiSelectors from './UiSelectors.js';
 import { formElements, resultsSection, burger, } from './UiSelectors.js';
 import { CalculateCaloriesIntake } from './CalculateCaloriesIntake.js';
-import validateForm from './validateForm.js';
+import validateForm from './ValidateForm.js';
 import scrollToSection from './ScrollToSection.js';
 import FillCaloriesFields from './FillCaloriesFields.js';
 import { CountMacros } from './CountMacros.js';
