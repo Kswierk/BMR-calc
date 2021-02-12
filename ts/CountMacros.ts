@@ -17,10 +17,14 @@ export interface IMacros {
   ketoCarbs: number;
 }
 
+export interface IMappedObject {
+  [k: string]: number;
+}
+
 export interface ICountedMacros {
   maintenance: IMacros;
-  cutting: IMacros;
-  bulking: IMacros;
+  cutting: IMappedObject;
+  bulking: IMappedObject;
 }
 
 export const CountMacros = (caloriesValues: IIntake) => {
@@ -75,10 +79,4 @@ export const CountMacros = (caloriesValues: IIntake) => {
   };
 
   return countedMacrosObject;
-
-  // return {
-  //   maintenance: maintenanceMacros,
-  //   cutting: cuttingMacros,
-  //   bulking: bulkingMacros,
-  // };
 };

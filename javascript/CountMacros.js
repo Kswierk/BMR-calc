@@ -26,9 +26,4 @@ export const CountMacros = (caloriesValues) => {
         bulking: bulkingMacros,
     };
     return countedMacrosObject;
-    // return {
-    //   maintenance: maintenanceMacros,
-    //   cutting: cuttingMacros,
-    //   bulking: bulkingMacros,
-    // };
 };

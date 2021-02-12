@@ -3,7 +3,7 @@ import FillCaloriesFields from './FillCaloriesFields.js';
 import HandleForm from './HandleForm.js';
 import { caloriesIntakeSection } from './UiSelectors.js';
 
-interface IFormValues {
+export interface IFormValues {
   genderVal: string;
   ageVal: number;
   weightVal: number;
@@ -33,6 +33,7 @@ export const CalculateCaloriesIntake = (formValues: IFormValues) => {
 
   const maleBaseCalories =
     66 + 13.7 * weightVal + 5 * heightVal - 6.76 * ageVal;
+
   const femaleBaseCalories =
     655 + 9.6 * weightVal + 1.8 * heightVal - 4.7 * ageVal;
 

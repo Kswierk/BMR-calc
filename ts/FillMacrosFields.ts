@@ -1,7 +1,7 @@
 import { macrosSectionElements } from './UiSelectors.js';
-import { IMacros } from './CountMacros';
+import { IMacros, IMappedObject } from './CountMacros';
 
-const FillMacrosFields = (macros: IMacros) => {
+const FillMacrosFields = (macros: IMacros | IMappedObject) => {
   const {
     balancedProtein,
     balancedFat,

@@ -142,3 +142,23 @@ macrosSectionElements.addElement(
 );
 
 macrosSectionElements.addElement('[data-macro-text]', 'macrosText');
+
+//ProperWeight selectors
+
+export const hamwiValueInput = document.querySelectorAll(
+  '.hamwi__number'
+);
+export const millerValueInput = document.querySelectorAll(
+  '.miller__number'
+);
+export const devineValueInput = document.querySelector(
+  '.devine__number'
+);
+export const robinsonValueInput = document.querySelector(
+  '.robinson__number'
+);
+
+// BMI selectors
+
+export const bmiSpan = document.querySelectorAll('.bmi__span');
+export const bmiText = document.querySelector('.bmi__classified');

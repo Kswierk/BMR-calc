@@ -7,12 +7,17 @@ import {
 } from './UiSelectors.js';
 
 import { CalculateCaloriesIntake } from './CalculateCaloriesIntake.js';
-import validateForm from './ValidateForm.js';
+import validateForm from './validateForm.js';
 import scrollToSection from './ScrollToSection.js';
 import FillCaloriesFields from './FillCaloriesFields.js';
 import { CountMacros } from './CountMacros.js';
 import FillMacrosFields from './FillMacrosFields.js';
 import switchMacros from './switchMacros.js';
+import setMacrosText from './setMacrosText.js';
+import caluclateProperWeight from './calculateProperWeight.js';
+import fillIdealWeightInputs from './fillIdealWeightInputs.js';
+import countBmi from './countBmi.js';
+import fillBmiInputs from './fillBmiInputs.js';
 
 //
 const handleFormValue = (
@@ -79,7 +84,15 @@ const HandleForm = () => {
 
     FillMacrosFields(macros.maintenance);
 
-    switchMacros(macros);
+    switchMacros(macros, calories);
+
+    const properWeight = caluclateProperWeight(formValues);
+
+    fillIdealWeightInputs(properWeight);
+
+    const bmi = countBmi(formValues);
+
+    fillBmiInputs(bmi);
 
     scrollToSection(results, showResults);
   } else scrollToSection(burger, hideResults);
